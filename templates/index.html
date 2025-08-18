@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Pazhong - Automation{% endblock title %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    {% block content %}
+    {# This is the navbar of pazhong automation#}
+    <header>
+        <span class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="">
+            <p>Pazhong</p>
+        </span>
+        <div class="hamburger">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Our Work</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <button>Get Started</button>
+    </header>
+    {# This is the responsive javascript of pazhong automation navbar #}
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+    {# script ends here #}
+    {# Ends here #}
+    <main>
+        {# HOME MAIN SECTION STARTS FROM here #}
+        <section class="home-section-main">
+            {# HOME LEFT MAIN SECTION STARTS FROM here #}
+            <section class="left-side-home">
+                <p>FROM CLICKS TO CONVERSIONS</p>
+                <h1>Accelerate Your Growth with Digital Precision</h1>
+                <article>
+                    Combine creativity and data to deliver digital marketing solutions that drive measurable growth. Whether
+                    you need SEO, ads, or branding, we help your business reach its full online potential.
+                </article>
+                <section class="cta-button">
+                    <button class="cta-1">Get started</button>
+                    <button class="cta-2">Contact Us</button>
+                </section>
+            </section>
+            {# HOME LEFT MAIN SECTION ENDS here #}
+            
+            {# HOME RIGHT MAIN SECTION STARTS FROM here #}
+            <section class="right-side-home">
+                <img src="{{ url_for('static', filename='images/home.png') }}" alt="">
+            </section>
+            {# HOME RIGHT MAIN SECTION ENDS here #}  
+        </section>
+        {# HOME MAIN SECTION ENDS here #}
+    </main>
+    {% endblock content %}
+</body>
+
+</html>
