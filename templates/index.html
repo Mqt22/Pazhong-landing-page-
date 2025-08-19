@@ -5,15 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Pazhong - Automation{% endblock title %}</title>
+
+    <!-- Main Styles -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Google Fonts: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 
 <body>
     {% block content %}
     {# This is the navbar of pazhong automation#}
-    <header>
+    <header data-aos="fade-down">
         <span class="logo">
             <img src="{{ url_for('static', filename='images/logo.png') }}" alt="">
             <p>Pazhong</p>
@@ -21,8 +31,8 @@
         <div class="hamburger">&#9776;</div>
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="">Services</a></li>
                 <li><a href="">Our Work</a></li>
                 <li><a href="">Contact</a></li>
@@ -36,30 +46,156 @@
     {# Ends here #}
     <main>
         {# HOME MAIN SECTION STARTS FROM here #}
-        <section class="home-section-main">
+        <section class="home-section-main" id="home">
             {# HOME LEFT MAIN SECTION STARTS FROM here #}
-            <section class="left-side-home">
+            <section class="left-side-home" data-aos="fade-right">
                 <p>FROM CLICKS TO CONVERSIONS</p>
                 <h1>Accelerate Your Growth with Digital Precision</h1>
                 <article>
-                    Combine creativity and data to deliver digital marketing solutions that drive measurable growth. Whether
+                    Combine creativity and data to deliver digital marketing solutions that drive measurable growth.
+                    Whether
                     you need SEO, ads, or branding, we help your business reach its full online potential.
                 </article>
                 <section class="cta-button">
                     <button class="cta-1">Get started</button>
                     <button class="cta-2">Contact Us</button>
                 </section>
+                <section class="letter-section">
+                    <section class="letter">
+                        <h1>89+</h1>
+                        <p>Succesful Project</p>
+                    </section>
+                    <section class="letter">
+                        <h1>99+</h1>
+                        <p>Projects Delivered</p>
+                    </section>
+                    <section class="letter">
+                        <h1>98%</h1>
+                        <p>Client Satisfaction</p>
+                    </section>
+                </section>
             </section>
             {# HOME LEFT MAIN SECTION ENDS here #}
-            
+
             {# HOME RIGHT MAIN SECTION STARTS FROM here #}
-            <section class="right-side-home">
+            <section class="right-side-home" data-aos="fade-left">
                 <img src="{{ url_for('static', filename='images/home.png') }}" alt="">
             </section>
-            {# HOME RIGHT MAIN SECTION ENDS here #}  
+            {# HOME RIGHT MAIN SECTION ENDS here #}
         </section>
         {# HOME MAIN SECTION ENDS here #}
+
+        {# About MAIN SECTION STARTS FROM here #}
+        <section class="about-main-section">
+            {# Left side of About MAIN SECTION STARTS FROM here #}
+            <section class="about-main-section-left" data-aos="fade-right">
+                <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="">
+            </section>
+            {# Left side of About MAIN SECTION Ends here #}
+
+            {# Right side of About MAIN SECTION STARTS FROM here #}
+            <section class="about-main-section-right" data-aos="fade-left" id="about">
+                <p class="title">About Us</p>
+                <h1>Empowering Brands Through Smart Marketing</h1>
+                <span class="dis">At Marketa, we’re more than just marketers we’re strategic partners in your business
+                    journey. With a team of creatives, analysts, and growth experts, we craft campaigns that are built
+                    to perform, scale, and deliver real impact.</span>
+                <button>Get started</button>
+                <section class="letter-about-section">
+                    <section class="word">
+                        <h1>12+</h1>
+                        <p>Years Experince</p>
+                    </section>
+                    <section class="word">
+                        <h1>25+</h1>
+                        <p>Skilled Team Members</p>
+                    </section>
+                    <section class="word">
+                        <h1>99+</h1>
+                        <p>Trusted Clients</p>
+                    </section>
+                </section>
+            </section>
+            {# Right side of About MAIN SECTION Ends here #}
+        </section>
+        {# About MAIN SECTION Ends here #}
+
+        {# Our Service MAIN SECTION STARTS FROM here #}
+        <section class="our-service-main-section">
+            {#  Left side of OUR Service MAIN SECTION start from here #}
+            <section class="our-service-left">
+                <p>Our Services</p>
+                <h1>Performance Driven Services Tailored For You</h1>
+            </section>
+            {#  Left side of OUR Service MAIN SECTION End here #}
+
+            {#  Right side of OUR Service MAIN SECTION start from here #}
+            <section class="our-service-right">
+                <p>We offer a full suite of digital marketing services designed to help your brand grow smarter and
+                    faster. Whether you’re looking to boost visibility, generate leads, or build a loyal audience — our
+                    expert team delivers strategies that work.</p>
+                <a href="#">More Detail</a>
+            </section>
+            {#  Right side of OUR Service MAIN SECTION End here #}
+
+            {# OUR Service Card main section start from here #}
+            <section class="our-services-main-card">
+            {# OUR Service MAIN SECTION Card 1 start from here #}
+                <section class="services-card-1">
+                    <section class="card">
+                        <h1></h1>
+                        <p></p>
+                        <a href=""></a>
+                    </section>
+                    <section class="card">
+                        <h1></h1>
+                        <p></p>
+                        <a href=""></a>
+                    </section>
+                    <section class="card">
+                        <h1></h1>
+                        <p></p>
+                        <a href=""></a>
+                    </section>
+                </section>
+                {# OUR Service MAIN SECTION Card 1 end from here #}
+
+                {# OUR Service MAIN SECTION Card 2 start from here #}
+                <section class="services-card-2">
+                    <section class="card">
+                        <h1></h1>
+                        <p></p>
+                        <a href=""></a>
+                    </section>
+                    <section class="card">
+                        <h1></h1>
+                        <p></p>
+                        <a href=""></a>
+                    </section>
+                    <section class="card">
+                        <h1></h1>
+                        <p></p>
+                        <a href=""></a>
+                    </section>
+                </section>
+                {# OUR Service MAIN SECTION Card 2 end here #}
+            </section>
+            {# OUR Service MAIN card section end here #}
+        </section>
+        {# OUR Service MAIN SECTION END here #}
     </main>
+    {# All script file here #}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,   // animation duration in ms
+            once: true,       // whether animation should happen only once
+            offset: 100,      // offset (px) from the original trigger point
+        });
+    </script>
+    <script src="{{ url_for('static', filename='js/timing.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/word.js') }}"></script>
+    {# All script file Ends here #}
     {% endblock content %}
 </body>
 
