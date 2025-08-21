@@ -18,6 +18,10 @@
 
     <!-- AOS CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -33,7 +37,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="">Services</a></li>
+                <li><a href="#section">Services</a></li>
                 <li><a href="">Our Work</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
@@ -45,46 +49,47 @@
     {# script ends here #}
     {# Ends here #}
     <main>
-        {# HOME MAIN SECTION STARTS FROM here #}
-        <section class="home-section-main" id="home">
-            {# HOME LEFT MAIN SECTION STARTS FROM here #}
-            <section class="left-side-home" data-aos="fade-right">
-                <p>FROM CLICKS TO CONVERSIONS</p>
-                <h1>Accelerate Your Growth with Digital Precision</h1>
-                <article>
-                    Combine creativity and data to deliver digital marketing solutions that drive measurable growth.
-                    Whether
-                    you need SEO, ads, or branding, we help your business reach its full online potential.
-                </article>
-                <section class="cta-button">
-                    <button class="cta-1">Get started</button>
-                    <button class="cta-2">Contact Us</button>
+        <div class="wrap-content">
+            {# HOME MAIN SECTION STARTS FROM here #}
+            <section class="home-section-main" id="home">
+                {# HOME LEFT MAIN SECTION STARTS FROM here #}
+                <section class="left-side-home" data-aos="fade-right">
+                    <p>FROM CLICKS TO CONVERSIONS</p>
+                    <h1>Accelerate Your Growth with Digital Precision</h1>
+                    <article>
+                        Combine creativity and data to deliver digital marketing solutions that drive measurable growth.
+                        Whether
+                        you need SEO, ads, or branding, we help your business reach its full online potential.
+                    </article>
+                    <section class="cta-button">
+                        <button class="cta-1">Get started</button>
+                        <button class="cta-2">Contact Us</button>
+                    </section>
+                    <section class="letter-section">
+                        <section class="letter">
+                            <h1>89+</h1>
+                            <p>Succesful Project</p>
+                        </section>
+                        <section class="letter">
+                            <h1>99+</h1>
+                            <p>Projects Delivered</p>
+                        </section>
+                        <section class="letter">
+                            <h1>98%</h1>
+                            <p>Client Satisfaction</p>
+                        </section>
+                    </section>
                 </section>
-                <section class="letter-section">
-                    <section class="letter">
-                        <h1>89+</h1>
-                        <p>Succesful Project</p>
-                    </section>
-                    <section class="letter">
-                        <h1>99+</h1>
-                        <p>Projects Delivered</p>
-                    </section>
-                    <section class="letter">
-                        <h1>98%</h1>
-                        <p>Client Satisfaction</p>
-                    </section>
+                {# HOME LEFT MAIN SECTION ENDS here #}
+
+                {# HOME RIGHT MAIN SECTION STARTS FROM here #}
+                <section class="right-side-home" data-aos="fade-left">
+                    <img src="{{ url_for('static', filename='images/home.png') }}" alt="">
                 </section>
+                {# HOME RIGHT MAIN SECTION ENDS here #}
             </section>
-            {# HOME LEFT MAIN SECTION ENDS here #}
-
-            {# HOME RIGHT MAIN SECTION STARTS FROM here #}
-            <section class="right-side-home" data-aos="fade-left">
-                <img src="{{ url_for('static', filename='images/home.png') }}" alt="">
-            </section>
-            {# HOME RIGHT MAIN SECTION ENDS here #}
-        </section>
-        {# HOME MAIN SECTION ENDS here #}
-
+            {# HOME MAIN SECTION ENDS here #}
+        </div>
         {# About MAIN SECTION STARTS FROM here #}
         <section class="about-main-section">
             {# Left side of About MAIN SECTION STARTS FROM here #}
@@ -121,41 +126,48 @@
         {# About MAIN SECTION Ends here #}
 
         {# Our Service MAIN SECTION STARTS FROM here #}
-        <section class="our-service-main-section">
-            {#  Left side of OUR Service MAIN SECTION start from here #}
+        <section class="our-service-main-section" id="section">
+            {# Left side of OUR Service MAIN SECTION start from here #}
             <section class="our-service-left">
                 <p>Our Services</p>
                 <h1>Performance Driven Services Tailored For You</h1>
             </section>
-            {#  Left side of OUR Service MAIN SECTION End here #}
+            {# Left side of OUR Service MAIN SECTION End here #}
 
-            {#  Right side of OUR Service MAIN SECTION start from here #}
+            {# Right side of OUR Service MAIN SECTION start from here #}
             <section class="our-service-right">
                 <p>We offer a full suite of digital marketing services designed to help your brand grow smarter and
                     faster. Whether you’re looking to boost visibility, generate leads, or build a loyal audience — our
-                    expert team delivers strategies that work.</p>
+                    expert team delivers strategies that work.
+                </p>
                 <a href="#">More Detail</a>
             </section>
-            {#  Right side of OUR Service MAIN SECTION End here #}
+            {# Right side of OUR Service MAIN SECTION End here #}
 
             {# OUR Service Card main section start from here #}
-            <section class="our-services-main-card">
-            {# OUR Service MAIN SECTION Card 1 start from here #}
+            <section class="our-services-main-card" data-aos="fade-up">
+                {# OUR Service MAIN SECTION Card 1 start from here #}
                 <section class="services-card-1">
                     <section class="card">
-                        <h1></h1>
-                        <p></p>
-                        <a href=""></a>
+                        <i class="fa-solid fa-asterisk"></i>
+                        <h1>Search Engine Optimization (SEO)</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.</p>
+                        <a href="#">Learn more ></a>
                     </section>
                     <section class="card">
-                        <h1></h1>
-                        <p></p>
-                        <a href=""></a>
+                        <i class="fa-solid fa-asterisk"></i>
+                        <h1>Paid Advertising (Meta & Google Ads)</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.</p>
+                        <a href="#">Learn more ></a>
                     </section>
                     <section class="card">
-                        <h1></h1>
-                        <p></p>
-                        <a href=""></a>
+                        <i class="fa-solid fa-asterisk"></i>
+                        <h1>Social Media Marketing & Management</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.</p>
+                        <a href="#">Learn more ></a>
                     </section>
                 </section>
                 {# OUR Service MAIN SECTION Card 1 end from here #}
@@ -163,19 +175,25 @@
                 {# OUR Service MAIN SECTION Card 2 start from here #}
                 <section class="services-card-2">
                     <section class="card">
-                        <h1></h1>
-                        <p></p>
-                        <a href=""></a>
+                        <i class="fa-solid fa-asterisk"></i>
+                        <h1>Branding Positioning & Identity Design</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.</p>
+                        <a href="#">Learn more ></a>
                     </section>
                     <section class="card">
-                        <h1></h1>
-                        <p></p>
-                        <a href=""></a>
+                        <i class="fa-solid fa-asterisk"></i>
+                        <h1>Email Marketing & Automation</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.</p>
+                        <a href="#">Learn more ></a>
                     </section>
                     <section class="card">
-                        <h1></h1>
-                        <p></p>
-                        <a href=""></a>
+                        <i class="fa-solid fa-asterisk"></i>
+                        <h1>Content Creation & Strategy</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.</p>
+                        <a href="#">Learn more ></a>
                     </section>
                 </section>
                 {# OUR Service MAIN SECTION Card 2 end here #}
@@ -183,6 +201,466 @@
             {# OUR Service MAIN card section end here #}
         </section>
         {# OUR Service MAIN SECTION END here #}
+
+        {# Why Choose Us MAIN SECTION start from here #}
+        <section class="why-choose-us-main-section">
+            {# Left side of Why Choose Us MAIN SECTION start from here #}
+            <section class="left-why-choose-us" data-aos="fade-right">
+                <p>Why Choose us</p>
+                <h1>What Makes Marketa the Right Choice</h1>
+                <span class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                    ullamcorper mattis, pulvinar dapibus leo.</span>
+                <section class="main-box">
+                    <section class="box">
+                        <span class="box-logo"><i class="ri-line-chart-line"></i></span>
+                        <h1>Built for Results</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.</p>
+                    </section>
+                    <section class="box">
+                        <span class="box-logo"><i class="ri-megaphone-line"></i></span>
+                        <h1>Clear Communication</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.</p>
+                    </section>
+                    <section class="box">
+                        <span class="box-logo"><i class="ri-focus-2-line"></i></span>
+                        <h1>Personalized Approach</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.</p>
+                    </section>
+                </section>
+            </section>
+            {# Left side of Why Choose Us MAIN SECTION end's here #}
+
+            {# Right side of Why Choose Us MAIN SECTION start from here #}
+            <section class="right-why-choose-us" data-aos="fade-left">
+                <img src="{{ url_for('static', filename='images/why-choose.jpg') }}" alt="">
+            </section>
+            {# Right side of Why Choose Us MAIN SECTION end's here #}
+        </section>
+        {# Why Choose Us MAIN SECTION end here #}
+
+        {# Our team main section start from here #}
+        <section class="our-team-main-section">
+            {# Our team top section start from here #}
+            <section class="top-of-our-team-section">
+                <p>Our Team</p>
+                <h1>Creative Minds Driving Your Brand Forward</h1>
+                <span>Our team is made up of creative thinkers, strategic planners, and digital experts who are
+                    passionate about helping your business grow. Together, we bring experience, innovation, and
+                    results.</span>
+            </section>
+            {# Our team top section end's here #}
+
+            {# Our team bottom section start from here #}
+            <section class="bottom-of-our-team-section" data-aos="fade-up">
+                <section class="img-boxes">
+                    <section class="img-box-img">
+                        <section class="social-links">
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        </section>
+                        <img src="{{ url_for('static', filename='images/man1.jpg') }}" alt="">
+                    </section>
+                    <h1>Harry</h1>
+                    <hr>
+                    <p>Chief Director</p>
+                </section>
+                <section class="img-boxes">
+                    <section class="img-box-img">
+                        <section class="social-links">
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        </section>
+                        <img src="{{ url_for('static', filename='images/man2.jpg') }}" alt="">
+                    </section>
+                    <h1>Zack</h1>
+                    <hr>
+                    <p>Marketing Director</p>
+                </section>
+                <section class="img-boxes">
+                    <section class="img-box-img">
+                        <section class="social-links">
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        </section>
+                        <img src="{{ url_for('static', filename='images/man3.jpg') }}" alt="">
+                    </section>
+                    <h1>Jackson</h1>
+                    <hr>
+                    <p>Account Manager</p>
+                </section>
+            </section>
+            {# Our team bottom section end's here #}
+        </section>
+        {# Our team main section end here #}
+        <div class="faq-wap-content">
+            {# Faq main section start from here #}
+            <section class="faq-main-section">
+                {# Left side of Faq main section start from here #}
+                <section class="left-faq-section" data-aos="fade-right">
+                    <img src="{{ url_for('static', filename='images/laptop.jpg') }}" alt="">
+                </section>
+                {# Left side of Faq main section end's here #}
+
+                {# Right side of Faq main section start from here #}
+                <section class="right-faq-section" data-aos="fade-right">
+                    <h4 class="faq-subtitle">FAQS</h4>
+                    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What services does Pazhong offer?
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We provide automation, digital marketing, and IT consulting services tailored for growth.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How long does it take to see results?
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most clients start seeing measurable results within 4–8 weeks depending on the project
+                                scope.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do you work with small businesses or startups?
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We specialize in helping startups and small businesses scale efficiently.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can you manage all of our digital marketing channels?
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely — we handle SEO, ads, social media, and more with tailored strategies.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How much do your services cost?
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Pricing depends on your needs, but we provide flexible packages to fit any budget.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How do we get started with Pazhong?
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Contact us through our website, and we’ll schedule a free consultation to discuss your
+                                goals.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                {# Right side of Faq main section end's here #}
+            </section>
+        </div>
+        {# Faq main section end's here #}
+
+        {# Picing plan main section start here#}
+        <section class="pricing-pal-plan-main-section">
+            {#Top of Picing plan main section start here#}
+            <section class="top-of-pricing-plan">
+                <p>our pricing plan</p>
+                <h1>Affordable Packages Tailored to Your Needs</h1>
+                <span>We understand every business is different. That’s why we offer flexible pricing packages that grow
+                    with you and deliver real impact.</span>
+            </section>
+            {#Top of Picing plan main section end's here#}
+
+            {#Picing plan main box start here#}
+            <section class="pricing-plan-main-box">
+                {#Picing plan main card 1 start here#}
+                <section class="pricing-plan-card">
+                    <h2>Starter plan</h2>
+                    <h1>$299<span class="mon">/Month</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, voluptas!</p>
+                    <button>Get Started</button>
+                    <ul>Inlucdes:
+                        <li><i class="fa-solid fa-asterisk"></i>&nbsp;&nbsp;&nbsp;Basic SEO Optimization</li>
+                        <li><i class="fa-solid fa-asterisk"></i>&nbsp;&nbsp;&nbsp;5 Social Media Posts/Week</li>
+                        <li><i class="fa-solid fa-asterisk"></i>&nbsp;&nbsp;&nbsp;1 Ad Campaign Setup(Google)</li>
+                        <li><i class="fa-solid fa-asterisk"></i>&nbsp;&nbsp;&nbsp;Monthly Analytics Report</li>
+                        <li><i class="fa-solid fa-asterisk"></i>&nbsp;&nbsp;&nbsp;Email Support</li>
+                    </ul>
+                </section>
+                {#Picing plan main card 1 end#}
+
+                {#Picing plan main card 2 start here#}
+                <section class="pricing-plan-card">
+                    <h2>Growth Plan</h2>
+                    <h1>$699<span class="mon">/Month</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, voluptas!</p>
+                    <button>Get Started</button>
+                    <ul>
+                        Includes:
+                        <li><i class="fa-solid fa-asterisk"></i>&nbsp;&nbsp;&nbsp;Advance SEO Optimization</li>
+                        <li><i class="fa-solid fa-asterisk"></i>&nbsp;&nbsp;&nbsp;20 Social Media Posts/Week</li>
+                        <li><i class="fa-solid fa-asterisk"></i>&nbsp;&nbsp;&nbsp;15 Ad Campaign Setup(Google)</li>
+                        <li><i class="fa-solid fa-asterisk"></i>&nbsp;&nbsp;&nbsp;Monthly Analytics Report</li>
+                        <li><i class="fa-solid fa-asterisk"></i>&nbsp;&nbsp;&nbsp;Email Support</li>
+                    </ul>
+                </section>
+                {#Picing plan main card 2 end#}
+
+                {#Picing plan main card 3 start here#}
+                <section class="pricing-plan-card">
+                    <h2>Enterprise Plan</h2>
+                    <h1>$999<span class="mon">/Month</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, voluptas!</p>
+                    <button>Get Started</button>
+                    <ul>
+                        Includes:
+                        <li><i class="fa-solid fa-asterisk"></i>&nbsp;&nbsp;&nbsp;Full SEO Optimization</li>
+                        <li><i class="fa-solid fa-asterisk"></i>&nbsp;&nbsp;&nbsp;50 Social Media Posts/Week</li>
+                        <li><i class="fa-solid fa-asterisk"></i>&nbsp;&nbsp;&nbsp;30 Ad Campaign Setup(Google)</li>
+                        <li><i class="fa-solid fa-asterisk"></i>&nbsp;&nbsp;&nbsp;Monthly Analytics Report</li>
+                        <li><i class="fa-solid fa-asterisk"></i>&nbsp;&nbsp;&nbsp;Email Support</li>
+                    </ul>
+                </section>
+                {#Picing plan main card 3 end#}
+            </section>
+        </section>
+        {#Picing plan main section start here#}
+
+
+        {#Testomonial main section start here#}
+        <section class="testomonial-main-section">
+            {#Top of testomonial main section start here#}
+            <section class="top-of-testominal">
+                <p>Testimonial</p>
+                <h1>Success Stories from Happy Clients Worldwide</h1>
+                <span>We’re proud to work with brands of all sizes and even prouder of the results we’ve achieved
+                    together. Here’s what our clients say about their experience with Marketa.</span>
+            </section>
+            {#Top of testomonial main section end's here#}
+
+            {#Bottom of testomonial main section start here#}
+            <section class="bottom-of-testomonial">
+                <div class="testimonial-slider">
+                    <div class="testimonial-track">
+                        <!-- Review 1 -->
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nunc non facilisis
+                                porttitor.</p>
+                            <div class="author">
+                                <img src="https://i.pravatar.cc/60?img=1" alt="Owen Brooks">
+                                <strong>Owen Brooks</strong>
+                            </div>
+                        </div>
+                        <!-- Review 2 -->
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nunc non facilisis
+                                porttitor.</p>
+                            <div class="author">
+                                <img src="https://i.pravatar.cc/60?img=2" alt="Ava Turner">
+                                <strong>Ava Turner</strong>
+                            </div>
+                        </div>
+                        <!-- Review 3 -->
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nunc non facilisis
+                                porttitor.</p>
+                            <div class="author">
+                                <img src="https://i.pravatar.cc/60?img=3" alt="Sophia Reed">
+                                <strong>Sophia Reed</strong>
+                            </div>
+                        </div>
+                        <!-- Review 4 -->
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nunc non facilisis
+                                porttitor.</p>
+                            <div class="author">
+                                <img src="https://i.pravatar.cc/60?img=4" alt="James Carter">
+                                <strong>James Carter</strong>
+                            </div>
+                        </div>
+                        <!-- Review 5 -->
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nunc non facilisis
+                                porttitor.</p>
+                            <div class="author">
+                                <img src="https://i.pravatar.cc/60?img=5" alt="Emily Watson">
+                                <strong>Emily Watson</strong>
+                            </div>
+                        </div>
+                        <!-- Review 6 -->
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nunc non facilisis
+                                porttitor.</p>
+                            <div class="author">
+                                <img src="https://i.pravatar.cc/60?img=6" alt="Michael Brown">
+                                <strong>Michael Brown</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {#Bottom of testomonial main section end's here#}
+        </section>
+        {#testomonial main section end's here#}
+
+        {#---------------------------------------------------------------------------#}
+        <section class="blog-section">
+            <h5 class="blog-subtitle">BLOG POST</h5>
+            <h2 class="blog-title">Explore Our Latest Digital Marketing Articles</h2>
+
+            <div class="blog-container">
+                <!-- Blog Card 1 -->
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?cs=srgb&dl=pexels-fauxels-3184418.jpg&fm=jpg&_gl=1*192xifj*_ga*MTc4MzY1NDAxNC4xNzUxNzQ0NDQ1*_ga_8JE65Q40S6*czE3NTU3ODg3ODgkbzQ0JGcxJHQxNzU1Nzg4OTQyJGoxNyRsMCRoMA.."
+                            alt="Blog 1">
+                    </div>
+                    <div class="blog-info">
+                        <p class="blog-meta">📅 July 22, 2025 | Uncategorized</p>
+                        <h3 class="blog-heading">Use Paid Ads Wisely</h3>
+                        <p class="blog-desc">Focus on Data Driven Decisions farmstudios / July 22, 2025 Digital...</p>
+                    </div>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?cs=srgb&dl=pexels-fauxels-3184325.jpg&fm=jpg&_gl=1*3rzbpt*_ga*MTc4MzY1NDAxNC4xNzUxNzQ0NDQ1*_ga_8JE65Q40S6*czE3NTU3ODg3ODgkbzQ0JGcxJHQxNzU1Nzg4OTAwJGo1OSRsMCRoMA.."
+                            alt="Blog 2">
+                    </div>
+                    <div class="blog-info">
+                        <p class="blog-meta">📅 July 22, 2025 | Uncategorized</p>
+                        <h3 class="blog-heading">Leverage Email Marketing</h3>
+                        <p class="blog-desc">Focus on Data Driven Decisions farmstudios / July 22, 2025 Digital...</p>
+                    </div>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?cs=srgb&dl=pexels-stywo-1054218.jpg&fm=jpg&_gl=1*dahbwc*_ga*MTc4MzY1NDAxNC4xNzUxNzQ0NDQ1*_ga_8JE65Q40S6*czE3NTU3ODg3ODgkbzQ0JGcwJHQxNzU1Nzg4Nzg4JGo2MCRsMCRoMA.."
+                            alt="Blog 3">
+                    </div>
+                    <div class="blog-info">
+                        <p class="blog-meta">📅 July 22, 2025 | Uncategorized</p>
+                        <h3 class="blog-heading">Social Proof and Testimonials</h3>
+                        <p class="blog-desc">Focus on Data Driven Decisions farmstudios / July 22, 2025 Digital...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {#---------------------------------------------------------------------------#}
+
+
+
+        {#----------------------------------------------------------------------------#}
+        <section class="cta-section">
+            <div class="cta-container">
+                <div class="cta-image">
+                    <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=500&h=500&fit=crop"
+                        alt="Grow Your Brand - Male">
+                </div>
+                <div class="cta-content">
+                    <h5 class="cta-subtitle">GET IN TOUCH</h5>
+                    <h2 class="cta-title">Ready to Grow Your Brand Online</h2>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn primary">Get Started</a>
+                        <a href="#" class="btn secondary">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {#---------------------------------------------------------------------#}
+
+
+
+
+        {#----------------------------------------------------------------------#}
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2>Marketa</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+                        mattis, pulvinar dapibus leo.</p>
+                </div>
+
+                <div class="footer-newsletter">
+                    <form method="POST" action="/subscribe">
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="footer-links">
+                <div>
+                    <h4>Explore</h4>
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Service</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div>
+                    <h4>Support</h4>
+                    <a href="#">FAQs</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Service</a>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">YouTube</a>
+                </div>
+                <div>
+                    <h4>Service</h4>
+                    <a href="#">SEO Optimization</a>
+                    <a href="#">Email Marketing</a>
+                    <a href="#">Paid Ads (Google, Meta)</a>
+                    <a href="#">Social Media Management</a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom">
+                <p>Copyright © 2025 Marketa</p>
+            </div>
+        </footer>
+
+        {#-----------------------------------------------------------------------#}
     </main>
     {# All script file here #}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -195,6 +673,8 @@
     </script>
     <script src="{{ url_for('static', filename='js/timing.js') }}"></script>
     <script src="{{ url_for('static', filename='js/word.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/faq.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/test.js') }}"></script>
     {# All script file Ends here #}
     {% endblock content %}
 </body>
