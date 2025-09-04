@@ -1,66 +1,369 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Pazhong - Automation{% endblock title %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-</head>
-
-<body>
+{% extends "base.html" %}
+{% block title %}Home{% endblock title %}
     {% block content %}
     {# This is the navbar of pazhong automation#}
-    <header>
-        <span class="logo">
-            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="">
-            <p>Pazhong</p>
-        </span>
-        <div class="hamburger">&#9776;</div>
-        <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Our Work</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
         </nav>
-        <button>Get Started</button>
-    </header>
-    {# This is the responsive javascript of pazhong automation navbar #}
-    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
-    {# script ends here #}
-    {# Ends here #}
-    <main>
-        {# HOME MAIN SECTION STARTS FROM here #}
-        <section class="home-section-main">
-            {# HOME LEFT MAIN SECTION STARTS FROM here #}
-            <section class="left-side-home">
-                <p>FROM CLICKS TO CONVERSIONS</p>
-                <h1>Accelerate Your Growth with Digital Precision</h1>
-                <article>
-                    Combine creativity and data to deliver digital marketing solutions that drive measurable growth. Whether
-                    you need SEO, ads, or branding, we help your business reach its full online potential.
-                </article>
-                <section class="cta-button">
-                    <button class="cta-1">Get started</button>
-                    <button class="cta-2">Contact Us</button>
+    </div>
+        <!-- Hero section starts here -->
+        <div class="wrap-content">
+            <section class="hero-main-section">
+                <h1 class="Hero-heading">Let's Create Something People Will Remember</h1>
+                <p class="Hero-Para">Transforming Technology Divisions into Possibilities.</p>
+            </section>
+        </div>
+        <!-- Hero section Ends here -->
+
+        <!-- Intro section starts here -->
+        <div class="wrap-intro-content">
+            <section class="intro-main-section">
+                <section class="left-intro-content">
+                    <p class="Intro-headline">13 years plus working experience</p>
+                    <h1 class="Intro-heading">Let Me Introduce Our Company</h1>
+                    <hr class="Intro-hr">
+                </section>
+                <section class="right-intro-content">
+                    <p class="Intro-normal-para">We are a creative company, that works with passion and love. We provide
+                        the best
+                        services you need. 13 years plus experience helped us to create a process that
+                        guarantees high productivity & profitability for your solution. We partnered with
+                        Technology Managers to increase their skills at every step of the development
+                        process.</p>
+                    <p class="Intro-bold-para">“In short we take pride in helping our clients deliver marvelous results
+                        when it
+                        comes to their projects. From data to performance, we’ve got you covered.”</p>
                 </section>
             </section>
-            {# HOME LEFT MAIN SECTION ENDS here #}
-            
-            {# HOME RIGHT MAIN SECTION STARTS FROM here #}
-            <section class="right-side-home">
-                <img src="{{ url_for('static', filename='images/home.png') }}" alt="">
-            </section>
-            {# HOME RIGHT MAIN SECTION ENDS here #}  
-        </section>
-        {# HOME MAIN SECTION ENDS here #}
-    </main>
-    {% endblock content %}
-</body>
+        </div>
+        <!-- Intro section Ends here -->
 
-</html>
+        <!-- Digital Marketing section starts here -->
+        <div class="wrap-digital-content">
+            <section class="main-digital-section">
+                <section class="top-digital-section">
+                    <h1 class="Digital-heading">Digital marketing services that help you grow</h1>
+                    <p class="Digital-para">Highly Tailored IT Design, Development, Management & Support Services</p>
+                </section>
+                <section class="bottom-digital-section">
+                    <section class="main-digital-boxes">
+                        <section class="digital-box">
+                            <h2 class="digital-box-heading">eCommerce Store & Web Applications</h2>
+                            <ul class="digital-box-lists">
+                                <li>Wordpress Development</li>
+                                <li>Shopify eCommerce Store</li>
+                                <li>Custom eComerce Store</li>
+                                <li>Web Applications</li>
+                                <li>Website Maintenance</li>
+                            </ul>
+                            <img src="{{ url_for('static', filename='images/globe.png') }}" alt="Globe colorful image"
+                                class="logo">
+                        </section>
+                        <section class="digital-box">
+                            <h2 class="digital-box-heading">Mobile Application Development</h2>
+                            <ul class="digital-box-lists">
+                                <li>Android</li>
+                                <li>IOS</li>
+                                <li>Hybrid / Cross Platform</li>
+                                <li>QC & App testing</li>
+                                <li>App Maintenance</li>
+                            </ul>
+                            <img src="{{ url_for('static', filename='images/Hone.png') }}" alt="Phone colorful image"
+                                class="logo">
+                        </section>
+                        <section class="digital-box">
+                            <h2 class="digital-box-heading">Automation’s</h2>
+                            <ul class="digital-box-lists">
+                                <li>Automatic machines</li>
+                                <li id="digital-box-special-list">Bot development</li>
+                                <li>Home automation</li>
+                                <li>Industrial automation</li>
+                                <li>Website automation/li>
+                            </ul>
+                            <img src="{{ url_for('static', filename='images/gear.jpg') }}" alt="Mail colorful image"
+                                class="logo" id="mail">
+                        </section>
+                        <section class="digital-box">
+                            <h2 class="digital-box-heading">UI/UX Design, Branding & Digital Marketing</h2>
+                            <ul class="digital-box-lists">
+                                <li>Website UI/UX design</li>
+                                <li>HMI design</li>
+                                <li>Graphic designing</li>
+                                <li>Digital Marketing posts</li>
+                                <li>Auto posting solutions</li>
+                            </ul>
+                            <img src="{{ url_for('static', filename='images/msg.png') }}" alt="Messages colorful image"
+                                class="logo" id="msg">
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </div>
+        <!-- Digital Marketing section Ends here -->
+
+        <section class="company-main-section">
+            <section class="top-company-main">
+                <h1 class="cp-heading">Trusted by 6+ Companies Worldwide</h1>
+                <p class="cp-para">You contribute over half of your life operating. Let us help you find the right fit
+                    for you or your corporation.</p>
+            </section>
+            <section class="bottom-comapny-main">
+                <div class="comapny-main-img-card">
+                    <div class="comapny-card"><img src="{{ url_for('static', filename='images/lg1.png') }}"
+                            alt="Company 1 logo" class="cp-lg"></div>
+                    <div class="comapny-card"><img src="{{ url_for('static', filename='images/lg2.png') }}"
+                            alt="Company 1 logo" class="cp-lg"></div>
+                    <div class="comapny-card"><img src="{{ url_for('static', filename='images/lg3.png') }}"
+                            alt="Company 1 logo" class="cp-lg"></div>
+                    <div class="comapny-card"><img src="{{ url_for('static', filename='images/lg4.png') }}"
+                            alt="Company 1 logo" class="cp-lg"></div>
+                    <div class="comapny-card"><img src="{{ url_for('static', filename='images/lg5.png') }}"
+                            alt="Company 1 logo" class="cp-lg"></div>
+                    <div class="comapny-card"><img src="{{ url_for('static', filename='images/lg6.png') }}"
+                            alt="Company 1 logo" class="cp-lg"></div>
+                </div>
+            </section>
+        </section>
+
+        <section class="wrap-work-section">
+            <section class="work-main-section">
+                <div class="wrok-boxes">
+                    <h2 class="work-heading">
+                        <img src="{{ url_for('static', filename='images/win.png') }}" alt="">7 <span
+                            class="sign">+</span>
+                    </h2>
+                    <p class="work-para">Years of experience in IT Services</p>
+                    <hr>
+                </div>
+
+                <div class="wrok-boxes">
+                    <h2 class="work-heading">
+                        <img src="{{ url_for('static', filename='images/earth.png') }}" alt=""> 480 <span
+                            class="sign">+</span>
+                    </h2>
+                    <p class="work-para">Projects completed for our respected clients.</p>
+                    <hr>
+                </div>
+
+                <div class="wrok-boxes">
+                    <h2 class="work-heading">
+                        <img src="{{ url_for('static', filename='images/book.png') }}" alt=""> 10 <span
+                            class="sign">+</span>
+                    </h2>
+                    <p class="work-para">
+                        Countries with an active client base.
+                    </p>
+                    <hr>
+                </div>
+
+                <div class="wrok-boxes">
+                    <h2 class="work-heading">
+                        <img src="{{ url_for('static', filename='images/user.png') }}" alt=""> 700 <span
+                            class="sign">+</span>
+                    </h2>
+                    <p class="work-para">Overall valued customers.for IT Services & Hosting</p>
+                    <hr>
+                </div>
+            </section>
+        </section>
+
+
+        <section class="project-main-section">
+            <section class="top-project-section">
+                <h2 class="prj-heading">Recent Website Projects</h2>
+                <p class="prj-para">Awesome stunning smart & dynamic feature for your website.</p>
+            </section>
+            <section class="bottom-project-section">
+                <section class="project-row-card">
+                    <div class="project-box">
+                        <img src="{{ url_for('static', filename='images/pj1.png') }}" alt="">
+                        <p class="prj-box-para">Global Auto Traders</p>
+                    </div>
+                    <div class="project-box">
+                        <img src="{{ url_for('static', filename='images/pj2.png') }}" alt="">
+                        <p class="prj-box-para">Chicoo Baby World</p>
+                    </div>
+                    <div class="project-box">
+                        <img src="{{ url_for('static', filename='images/pj3.png') }}" alt="">
+                        <p class="prj-box-para">Cyber Avanza</p>
+                    </div>
+                </section>
+
+
+
+
+                <section class="project-row-card">
+                    <div class="project-box">
+                        <img src="{{ url_for('static', filename='images/pj4.png') }}" alt="">
+                        <p class="prj-box-para">America Pakistan Business Development Forum</p>
+                    </div>
+                    <div class="project-box">
+                        <img src="{{ url_for('static', filename='images/pj5.png') }}" alt="">
+                        <p class="prj-box-para">Maryam Books</p>
+                    </div>
+                    <div class="project-box">
+                        <img src="{{ url_for('static', filename='images/pj6.png') }}" alt="">
+                        <p class="prj-box-para">Lucobot</p>
+                    </div>
+                </section>
+
+
+
+
+                <section class="project-row-card">
+                    <div class="project-box">
+                        <img src="{{ url_for('static', filename='images/pj7.png') }}" alt="">
+                        <p class="prj-box-para">DA Natural</p>
+                    </div>
+                    <div class="project-box">
+                        <img src="{{ url_for('static', filename='images/pj8.png') }}" alt="">
+                        <p class="prj-box-para">Unique & Shine LTD</p>
+                    </div>
+                    <div class="project-box">
+                        <img src="{{ url_for('static', filename='images/pj9.png') }}" alt="">
+                        <p class="prj-box-para">Access Systems</p>
+                    </div>
+                </section>
+            </section>
+            <a href="#">View More websites</a>
+        </section>
+
+        <section class="custom-main-section">
+            <section class="top-custom-section">
+                <h2 class="custom-heading">Customize Mobile Applications</h2>
+                <p class="custom-para">It's crafted with the latest trend of design & coded with all modern approaches.
+                </p>
+            </section>
+            <section class="bottom-custom-section">
+                <section class="custom-row-card">
+                    <div class="custom-box">
+                        <img src="{{ url_for('static', filename='images/noodless.png') }}" alt="">
+                        <h5 class="custom-heading-box">Knorr Nodless</h5>
+                        <p class="custom-box-para">Nodless preparetion activity app for kids</p>
+                    </div>
+                    <div class="custom-box">
+                        <img src="{{ url_for('static', filename='images/Ba.png') }}" alt="">
+                        <h5 class="custom-heading-box">Morinaga</h5>
+                        <p class="custom-box-para">BA/Promoter sales & activity monitoring app</p>
+                    </div>
+                    <div class="custom-box">
+                        <img src="{{ url_for('static', filename='images/corn.png') }}" alt="">
+                        <h5 class="custom-heading-box">Speed mart</h5>
+                        <p class="custom-box-para">eComerce Grocery Application</p>
+                    </div>
+                </section>
+
+
+
+
+                <section class="custom-row-card">
+                    <div class="custom-box">
+                        <img src="{{ url_for('static', filename='images/future.png') }}" alt="">
+                        <h5 class="custom-heading-box">Future Technologies</h5>
+                        <p class="custom-box-para">Order Booking App for sales team</p>
+                    </div>
+                    <div class="custom-box">
+                        <img src="{{ url_for('static', filename='images/LBI.png') }}" alt="">
+                        <h5 class="custom-heading-box">LBI - Factory for the World</h5>
+                        <p class="custom-box-para">Buyer Seller Online B2B Business App</p>
+                    </div>
+                    <div class="custom-box">
+                        <img src="{{ url_for('static', filename='images/Allied.png') }}" alt="">
+                        <h5 class="custom-heading-box">Allied Contractors</h5>
+                        <p class="custom-box-para">Civil Working & Project Management App</p>
+                    </div>
+                </section>
+
+                <section class="custom-row-card">
+                    <div class="custom-box">
+                        <img src="{{ url_for('static', filename='images/digital.png') }}" alt="">
+                        <h5 class="custom-heading-box">Digital School System</h5>
+                        <p class="custom-box-para">School Management System</p>
+                    </div>
+                    <div class="custom-box">
+                        <img src="{{ url_for('static', filename='images/Akhtar.png') }}" alt="">
+                        <h5 class="custom-heading-box">Akhtar Nawaz Electronics</h5>
+                        <p class="custom-box-para">eCommerce Store for UAE customers</p>
+                    </div>
+                    <div class="custom-box">
+                        <img src="{{ url_for('static', filename='images/Lette.png') }}" alt="">
+                        <h5 class="custom-heading-box">Lotte Chemicals Pakistan Ltd</h5>
+                        <p class="custom-box-para">Staff & Shift Attendance Management App</p>
+                    </div>
+                </section>
+
+                <a href="#" class="custom-link">View More apps</a>
+            </section>
+        </section>
+        {#<section class="main-bottom-section">
+            <section class="map-main-section">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d878267.9010104599!2d73.12601082938906!3d30.697759755406384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919054ccfb7fa63%3A0xc8a1ffb24d974730!2sPaZhong%20Automation!5e0!3m2!1sen!2s!4v1756302933045!5m2!1sen!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+            <div class="contact-container">
+                <div class="contact-left">
+                    <h2>Grow your business with our expertise</h2>
+                    <p>Grow your business with our expertise. We are dedicated to serving you all time.</p>
+
+                    <div class="contact-info">
+                        <p>
+                            <img src="{{ url_for('static', filename='images/Location.png') }}" alt="Location"
+                                class="icon">
+                            Office# T-1 Third Floor, Mateen Shoppers Gallery, P.E.C.H.S Block 2 Tariq Road, Karachi
+                            75400,
+                            Pakistan.
+                        </p>
+                        <p>
+                            <img src="{{ url_for('static', filename='images/phone.png') }}" alt="Phone" class="icon">
+                            03452159821
+                        </p>
+                        <p id="p-of-contact-info">
+                            <img src="{{ url_for('static', filename='images/email.png') }}" alt="Email" class="icon">
+                            info@pazhongautomation.com
+                        </p>
+                        <p>
+                            <img src="{{ url_for('static', filename='images/whatsapp.png') }}" alt="WhatsApp"
+                                class="icon">
+                            923452159821
+                        </p>
+                        <p>
+                            <img src="{{ url_for('static', filename='images/map.png') }}" alt="Map" class="icon">
+                            Office Location
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="contact-right">
+                    <h2>Tell us about your idea, and we’ll make it happen</h2>
+                    <p>Have a brand problem that needs to be solved? We’d love to hear about it!</p>
+
+                    <form action="/submit" method="POST" class="contact-form">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Full Name" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="form-row">
+                            <input type="text" name="contact" placeholder="Contact no*" required>
+                            <input type="text" name="inquiry" placeholder="Inquiry for">
+                        </div>
+
+                        <textarea name="details" placeholder="Details*" required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>#}
+        {% include "_bottom.html" %}
+{% endblock content %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+
+{{ prj_component.project_hero('images/pj8.png', 'Unique & Shine LTD') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-broom",
+    "Unique & Shine LTD",
+    "Unique & Shine LTD is a professional cleaning services platform that delivers household and corporate cleaning solutions with reliability and care. The website showcases service packages, expert staff, and client testimonials to build trust with potential customers. With a modern and clean design, Unique & Shine LTD emphasizes professionalism, quick booking options, and transparent pricing. The platform is optimized to attract local customers looking for dependable cleaning services while highlighting the brand’s commitment to customer satisfaction and hygiene. Its responsive design ensures that users can easily request services on any device."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Service Highlights", "items": [
+        "Residential cleaning packages.",
+        "Corporate and office cleaning.",
+        "Specialized deep cleaning."
+    ]},
+    {"heading": "Trust-Building Content", "items": [
+        "Customer testimonials.",
+        "Staff expertise showcased.",
+        "Service guarantees."
+    ]},
+    {"heading": "Easy Booking", "items": [
+        "Simple contact forms.",
+        "Quick scheduling system.",
+        "Transparent pricing options."
+    ]},
+    {"heading": "Local SEO Focus", "items": [
+        "Optimized for regional visibility.",
+        "Maps and directions integrated."
+    ]},
+    {"heading": "Responsive Design", "items": [
+        "Seamless mobile usability.",
+        "Fast-loading service pages.",
+        "Clean, intuitive layouts."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Offer professional and reliable cleaning services.",
+    "Build customer trust with transparent practices.",
+    "Simplify booking for household and corporate clients."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj26.png', 'Veintiseis - Canada') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-ring",
+    "Veintiseis - Canada",
+    "Veintiseis – Canada is a jewelry e-commerce website presenting elegant collections of rings, necklaces, and accessories. The design emphasizes minimalism, luxury, and professionalism. The catalog allows customers to browse by category, with product details highlighting design quality, materials, and prices. Responsive layouts ensure smooth navigation across devices. The site builds brand presence with stylish product imagery, clean typography, and intuitive structure, making Veintiseis a trusted digital store for fine jewelry enthusiasts."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Jewelry Collections", "items": [
+        "Rings and necklaces.",
+        "Luxury accessories.",
+        "Stylish designs."
+    ]},
+    {"heading": "Catalog Features", "items": [
+        "Category browsing.",
+        "Detailed descriptions.",
+        "Price transparency."
+    ]},
+    {"heading": "Elegant Design", "items": [
+        "Minimalist layout.",
+        "Luxury branding.",
+        "Clean typography."
+    ]},
+    {"heading": "Customer Engagement", "items": [
+        "Inquiry support.",
+        "Product highlights."
+    ]},
+    {"heading": "Responsive Layout", "items": [
+        "Mobile-optimized.",
+        "Fast browsing.",
+        "Cross-device support."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Promote Veintiseis jewelry collections effectively.",
+    "Provide customers with a stylish and easy shopping experience.",
+    "Reinforce luxury branding in the Canadian market."
+]) }}
+
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

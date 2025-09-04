@@ -1,0 +1,1529 @@
+.wrap-about-content {
+    width: 100%;
+    height: 270px;
+    background: #101010;
+}
+
+.wrap-about-content>.main-about-hero-section {
+    max-width: 980px;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-about-hero-section>.about-hero-hr {
+    width: 85px;
+    height: 5px;
+    background: #009dff;
+    border: none;
+}
+
+.main-about-hero-section>.about-hero-heading {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #FFFFFF;
+}
+
+.what-we-do-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.what-we-do-main>.top-what-we-do {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Background large faded text */
+.top-what-we-do>.top-what-we-do-logo {
+    font-size: 180px;
+    font-weight: 800;
+    color: rgba(68, 68, 68, 0.05);
+    /* faint grey look */
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+/* Heading on top */
+.top-what-we-do>.what-we-do-heading {
+    font-size: 36px;
+    font-weight: 700;
+    color: black;
+    line-height: 46px;
+    position: relative;
+    margin-bottom: 60px;
+    top: 65px;
+}
+
+/* Paragraph below heading */
+.top-what-we-do>.what-we-do-para {
+    font-size: 15px;
+    font-weight: 400;
+    color: #333;
+    line-height: 26px;
+    margin: 0 auto;
+    position: relative;
+    max-width: 960px;
+}
+
+.what-we-do-main>.bottom-what-we-do {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    padding: 40px 20px;
+}
+
+.bottom-what-we-do>.what-we-do-card {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 320px;
+    height: 280px;
+    gap: 10px;
+    background: white;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 8px 8px;
+    border-radius: 5px;
+    align-items: stretch;
+    border: 1px solid rgba(184, 184, 184, 0.358);
+}
+
+.what-we-do-card>.what-we-do-card-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.what-we-do-card>.what-we-do-card-headign {
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    line-height: 56px;
+}
+
+.what-we-do-card>.what-we-do-card-para {
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+    line-height: 25px.5px;
+    max-width: 400px;
+}
+
+.wrap-industry-content {
+    width: 100%;
+    height: 401px;
+    background: #EBEBEB;
+}
+
+.wrap-industry-content>.main-industry-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.main-industry-section>.main-industry-heading {
+    flex: 1;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 46px;
+    color: black;
+}
+
+.main-industry-section>.main-industry-para {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25.5px;
+    color: black;
+}
+
+.main-industry-section>.bottom-industry-main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 60px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.bottom-industry-main-section>ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    list-style-type: none;
+    line-height: 46px;
+}
+
+.bottom-industry-main-section>ul>li {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25.5px;
+    color: black;
+}
+
+.bottom-industry-main-section>ul>hr {
+    width: 200px;
+    height: 1px;
+    background: #009dff;
+    border: none;
+    margin-top: 50px;
+}
+
+
+
+.service-section-about-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.service-section-about-page>.top-what-we-do {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Background large faded text */
+.top-what-we-do>.top-what-we-do-logo {
+    font-size: 200px;
+    font-weight: 800;
+    color: rgba(68, 68, 68, 0.053);
+    /* faint grey look */
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    white-space: nowrap;
+}
+
+/* Heading on top */
+.top-what-we-do>.what-we-do-heading {
+    font-size: 36px;
+    font-weight: 700;
+    color: black;
+    line-height: 46px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 50px;
+    top: 45px;
+}
+
+/* Paragraph below heading */
+.top-what-we-do>.what-we-do-para {
+    font-size: 15px;
+    font-weight: 400;
+    color: #333;
+    line-height: 26px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+}
+
+
+/* Section styling */
+.reasons-section {
+    position: relative;
+    padding: 80px 20px;
+    background: #fff;
+    text-align: center;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* Parent container with gutters */
+.reasons-container {
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Big faded background text */
+.reasons-bg-text {
+    font-size: 180px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.05);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Heading */
+.reasons-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 140px;
+    top: 110px;
+}
+
+/* Subheading */
+.reasons-subheading {
+    font-size: 15px;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    position: relative;
+    z-index: 1;
+    line-height: 1.6;
+}
+
+/* Grid for cards */
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+    text-align: start;
+}
+
+/* Individual card */
+.reason-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-5px);
+}
+
+.reason-card img {
+    max-width: 60px;
+    margin-bottom: 20px;
+}
+
+.reason-card h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    max-width: 180px;
+}
+
+.reason-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+
+
+
+/*wework Section styling */
+.wework-wrap-content {
+    width: 100%;
+    height: 650px;
+    background: #EBEBEB;
+}
+
+.wework-section {
+    position: relative;
+    padding: 80px 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* Parent container with gutters */
+.wework-container {
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Big faded background text */
+.wework-bg-text {
+    font-size: 180px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.05);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Heading */
+.wework-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 140px;
+    top: 110px;
+}
+
+/* Subheading */
+.wework-subheading {
+    font-size: 15px;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    position: relative;
+    z-index: 1;
+    line-height: 1.6;
+}
+
+/* Grid for cards */
+.wework-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+    text-align: start;
+    top: 50px;
+}
+
+/* Individual card */
+.wework-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.wework-card:hover {
+    transform: translateY(-5px);
+}
+
+.wework-card img {
+    max-width: 60px;
+    margin-bottom: 20px;
+}
+
+.wework-card h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    max-width: 180px;
+}
+
+.wework-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+
+.contact-us-main-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    width: 100%;
+    max-width: 1100px;
+    height: 372px;
+    margin: 50px auto;
+    flex-direction: row;
+}
+.contact-us-main-section>.left-contact-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    flex: 1;
+    height: 100%;
+    gap: 20px;
+    background: #009dff;
+    padding: 20px 40px;
+}
+.left-contact-side>.left-contact-heading{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 38px;
+}
+.left-contact-side>.left-contact-para{
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    max-width: 320px;
+    line-height: 25.5px;
+}
+.left-contact-side>.left-contact-para>.para-highlight{
+    font-weight: 700;
+}
+
+
+.contact-us-main-section>.right-contact-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    gap: 20px;
+    background: #EBEBEB;
+    padding: 20px;
+}
+.right-contact-side>i{
+    font-size: 50px;
+    font-weight: 600;
+    color: black;
+}
+.right-contact-side>.right-contact-para{
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    max-width: 320px;
+    line-height: 25.5px;
+}
+.right-contact-side>.right-contact-heading{
+    font-size: 30px;
+    font-weight: 700;
+    color: #009dff;
+    line-height: 38px;   
+    max-width: 300px;
+}
+
+@media only screen and (max-width: 320px) {
+    .wrap-about-content {
+        height: 120px;
+    }
+
+    .wrap-about-content>.main-about-hero-section {
+        max-width: 200px;
+    }
+
+    .main-about-hero-section>.about-hero-hr {
+        width: 40px;
+    }
+
+    .main-about-hero-section>.about-hero-heading {
+        font-size: 24px;
+    }
+
+    .what-we-do-main {
+        max-width: 200px;
+    }
+
+    .what-we-do-main>.top-what-we-do {
+        padding: 20px 0;
+    }
+
+    .top-what-we-do>.top-what-we-do-logo {
+        font-size: 70px;
+    }
+
+    .top-what-we-do>.what-we-do-heading {
+        font-size: 12px;
+        top: 15px;
+        margin-bottom: 0;
+    }
+
+    .top-what-we-do>.what-we-do-para {
+        font-size: 11px;
+        max-width: 800px;
+        margin-top: -25px;
+    }
+
+    .what-we-do-main>.bottom-what-we-do {
+        padding: 40px 10px;
+    }
+
+    .bottom-what-we-do>.what-we-do-card {
+        width: 270px;
+        height: auto;
+    }
+
+    .what-we-do-card>.what-we-do-card-headign {
+        font-size: 18px;
+    }
+
+    .what-we-do-card>.what-we-do-card-para {
+        font-size: 13px;
+    }
+
+    .wrap-industry-content {
+        height: auto;
+    }
+
+    .wrap-industry-content>.main-industry-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .wrap-industry-content>.main-industry-section {
+        max-width: 200px;
+    }
+
+    .main-industry-section>.main-industry-heading {
+        font-size: 15px;
+    }
+
+    .main-industry-section>.main-industry-para {
+        font-size: 11px;
+    }
+
+    .main-industry-section>.bottom-industry-main-section {
+        margin-top: 30px;
+    }
+
+    .bottom-industry-main-section>ul {
+        justify-content: center;
+        width: 250px;
+        align-items: center;
+    }
+
+    .reasons-section {
+        max-width: 250px;
+    }
+
+    .reasons-bg-text {
+        font-size: 40px;
+    }
+
+    .reasons-heading {
+        top: 20px;
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
+
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .wework-wrap-content{
+        height: auto;
+    }
+    .wework-section {
+        max-width: 250px;
+    }
+
+    .wework-bg-text {
+        font-size: 40px;
+    }
+
+    .wework-heading {
+        top: 20px;
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
+
+    .wework-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-us-main-section{
+        flex-direction: column;
+        height: auto;
+        max-width: 200px;
+        background: #EBEBEB;
+    }
+    .left-contact-side>.left-contact-heading{
+        font-size: 17px;
+    }
+
+    .right-contact-side>.right-contact-heading{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 376px) {
+    .wrap-about-content {
+        height: 120px;
+    }
+
+    .wrap-about-content>.main-about-hero-section {
+        max-width: 250px;
+    }
+
+    .main-about-hero-section>.about-hero-hr {
+        width: 60px;
+    }
+
+    .main-about-hero-section>.about-hero-heading {
+        font-size: 28px;
+    }
+
+    .what-we-do-main {
+        max-width: 250px;
+    }
+
+    .what-we-do-main>.top-what-we-do {
+        padding: 20px 0;
+    }
+
+    .top-what-we-do>.top-what-we-do-logo {
+        font-size: 90px;
+    }
+
+    .top-what-we-do>.what-we-do-heading {
+        font-size: 14px;
+        top: 25px;
+        margin-bottom: 0;
+    }
+
+    .top-what-we-do>.what-we-do-para {
+        font-size: 11px;
+        max-width: 800px;
+    }
+
+    .wrap-industry-content {
+        height: auto;
+    }
+
+    .wrap-industry-content>.main-industry-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .wrap-industry-content>.main-industry-section {
+        max-width: 250px;
+    }
+
+    .main-industry-section>.main-industry-heading {
+        font-size: 15px;
+    }
+
+    .main-industry-section>.main-industry-para {
+        font-size: 11px;
+    }
+
+    .main-industry-section>.bottom-industry-main-section {
+        margin-top: 30px;
+    }
+
+    .bottom-industry-main-section>ul {
+        justify-content: center;
+        width: 250px;
+        align-items: center;
+    }
+
+    .reasons-section {
+        max-width: 300px;
+    }
+
+    .reasons-bg-text {
+        font-size: 50px;
+    }
+
+    .reasons-heading {
+        top: 20px;
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
+
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .wework-wrap-content{
+        height: auto;
+    }
+    .wework-section {
+        max-width: 300px;
+    }
+
+    .wework-bg-text {
+        font-size: 50px;
+    }
+
+    .wework-heading {
+        top: 20px;
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
+
+    .wework-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-us-main-section{
+        flex-direction: column;
+        height: auto;
+        max-width: 250px;
+        background: #EBEBEB;
+    }
+    .left-contact-side>.left-contact-heading{
+        font-size: 17px;
+    }
+
+    .right-contact-side>.right-contact-heading{
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (min-width: 377px) and (max-width: 426px) {
+    .wrap-about-content {
+        height: 200px;
+    }
+
+    .wrap-about-content>.main-about-hero-section {
+        max-width: 350px;
+    }
+
+    .what-we-do-main {
+        max-width: 350px;
+    }
+
+    .what-we-do-main>.top-what-we-do {
+        padding: 20px 20px;
+    }
+
+    .top-what-we-do>.top-what-we-do-logo {
+        font-size: 120px;
+    }
+
+    .top-what-we-do>.what-we-do-heading {
+        font-size: 18px;
+        top: 55px;
+    }
+
+    .top-what-we-do>.what-we-do-para {
+        font-size: 11px;
+        max-width: 800px;
+        margin-top: -30px;
+    }
+
+    .wrap-industry-content {
+        height: auto;
+    }
+
+    .wrap-industry-content>.main-industry-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .wrap-industry-content>.main-industry-section {
+        max-width: 350px;
+    }
+
+    .main-industry-section>.main-industry-heading {
+        font-size: 20px;
+    }
+
+    .main-industry-section>.main-industry-para {
+        font-size: 13px;
+    }
+
+    .main-industry-section>.bottom-industry-main-section {
+        margin-top: 30px;
+    }
+
+    .bottom-industry-main-section>ul {
+        justify-content: center;
+        width: 250px;
+        align-items: center;
+    }
+
+    .reasons-section {
+        max-width: 350px;
+    }
+
+    .reasons-bg-text {
+        font-size: 60px;
+    }
+
+    .reasons-heading {
+        top: 30px;
+        margin-bottom: 60px;
+    }
+
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wework-wrap-content {
+        height: auto;
+    }
+
+    .wework-section {
+        max-width: 350px;
+    }
+
+    .wework-bg-text {
+        font-size: 60px;
+    }
+
+    .wework-heading {
+        top: 30px;
+        margin-bottom: 60px;
+    }
+
+    .wework-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-us-main-section{
+        flex-direction: column;
+        height: auto;
+        max-width: 350px;
+        background: #EBEBEB;
+    }
+    .left-contact-side>.left-contact-heading{
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (min-width: 427px) and (max-width: 768px) {
+    .wrap-about-content {
+        height: 200px;
+    }
+
+    .wrap-about-content>.main-about-hero-section {
+        max-width: 650px;
+    }
+
+    .what-we-do-main {
+        max-width: 650px;
+    }
+
+    .what-we-do-main>.top-what-we-do {
+        padding: 20px 20px;
+    }
+
+    .top-what-we-do>.top-what-we-do-logo {
+        font-size: 140px;
+    }
+
+    .top-what-we-do>.what-we-do-heading {
+        font-size: 27px;
+    }
+
+    .top-what-we-do>.what-we-do-para {
+        font-size: 13px;
+        max-width: 800px;
+        margin-top: -10px;
+    }
+
+    .what-we-do-main>.bottom-what-we-do {
+        padding: 40px 10px;
+    }
+
+    .bottom-what-we-do>.what-we-do-card {
+        width: 200px;
+    }
+
+    .what-we-do-card>.what-we-do-card-para {
+        font-size: 12px;
+    }
+
+    .wrap-industry-content {
+        height: auto;
+    }
+
+    .wrap-industry-content>.main-industry-section {
+        max-width: 650px;
+    }
+
+    .main-industry-section>.main-industry-heading {
+        font-size: 20px;
+    }
+
+    .main-industry-section>.main-industry-para {
+        font-size: 11px;
+        max-width: 300px;
+    }
+
+    .main-industry-section>.bottom-industry-main-section {
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    .bottom-industry-main-section>ul {
+        text-align: start;
+        align-items: start;
+        width: 300px;
+    }
+
+    .reasons-section {
+        max-width: 650px;
+    }
+
+    .reasons-bg-text {
+        font-size: 110px;
+    }
+
+    .reasons-heading {
+        top: 60px;
+        margin-bottom: 80px;
+    }
+
+    .reasons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wework-wrap-content {
+        height: 900px;
+    }
+
+    .wework-section {
+        max-width: 650px;
+    }
+
+    .wework-bg-text {
+        font-size: 130px;
+    }
+
+    .wework-heading {
+        top: 70px;
+        margin-bottom: 120px;
+    }
+
+    .wework-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-us-main-section{
+        max-width: 650px;
+    }
+    .left-contact-side>.left-contact-heading{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 968px) {
+    .wrap-about-content {
+        height: 230px;
+    }
+
+    .wrap-about-content>.main-about-hero-section {
+        max-width: 860px;
+    }
+
+    .what-we-do-main {
+        max-width: 860px;
+    }
+
+    .what-we-do-main>.top-what-we-do {
+        padding: 30px 20px;
+    }
+
+    .top-what-we-do>.top-what-we-do-logo {
+        font-size: 155px;
+    }
+
+    .top-what-we-do>.what-we-do-heading {
+        font-size: 30px;
+    }
+
+    .top-what-we-do>.what-we-do-para {
+        font-size: 13px;
+    }
+
+    .what-we-do-main>.bottom-what-we-do {
+        padding: 40px 10px;
+    }
+
+    .bottom-what-we-do>.what-we-do-card {
+        width: 270px;
+    }
+
+    .what-we-do-card>.what-we-do-card-para {
+        font-size: 13px;
+    }
+
+    .wrap-industry-content>.main-industry-section {
+        max-width: 790px;
+    }
+
+    .main-industry-section>.main-industry-heading {
+        font-size: 23px;
+    }
+
+    .main-industry-section>.main-industry-para {
+        font-size: 13px;
+    }
+
+    .main-industry-section>.bottom-industry-main-section {
+        gap: 20px;
+    }
+
+    .bottom-industry-main-section>ul>li {
+        font-size: 12px;
+    }
+
+    .bottom-industry-main-section>ul>hr {
+        width: 170px;
+    }
+
+    .reasons-section {
+        max-width: 790px;
+    }
+
+    .reasons-bg-text {
+        font-size: 130px;
+    }
+
+    .reasons-heading {
+        top: 70px;
+        margin-bottom: 120px;
+    }
+
+    .reasons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .wework-wrap-content {
+        height: 850px;
+    }
+
+    .wework-section {
+        max-width: 790px;
+    }
+
+    .wework-bg-text {
+        font-size: 150px;
+    }
+
+    .wework-heading {
+        top: 90px;
+        margin-bottom: 120px;
+    }
+
+    .wework-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-us-main-section{
+        max-width: 790px;
+    }
+    .left-contact-side>.left-contact-heading{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 969px) and (max-width: 1024px) {
+    .wrap-about-content {
+        height: 260px;
+    }
+
+    .wrap-about-content>.main-about-hero-section {
+        max-width: 860px;
+    }
+
+    .what-we-do-main {
+        max-width: 860px;
+    }
+
+    .what-we-do-main>.top-what-we-do {
+        padding: 30px 20px;
+    }
+
+    .top-what-we-do>.top-what-we-do-logo {
+        font-size: 160px;
+    }
+
+    .top-what-we-do>.what-we-do-heading {
+        font-size: 30px;
+    }
+
+    .top-what-we-do>.what-we-do-para {
+        font-size: 13px;
+    }
+
+    .what-we-do-main>.bottom-what-we-do {
+        padding: 40px 10px;
+    }
+
+    .bottom-what-we-do>.what-we-do-card {
+        width: 270px;
+    }
+
+    .wrap-industry-content>.main-industry-section {
+        max-width: 860px;
+    }
+
+    .main-industry-section>.main-industry-heading {
+        font-size: 23px;
+    }
+
+    .main-industry-section>.main-industry-para {
+        font-size: 13px;
+    }
+
+    .main-industry-section>.bottom-industry-main-section {
+        gap: 30px;
+    }
+
+    .bottom-industry-main-section>ul>li {
+        font-size: 13px;
+    }
+
+    .bottom-industry-main-section>ul>hr {
+        width: 180px;
+    }
+
+    .service-section-about-page>.top-what-we-do {
+        padding: 30px 20px;
+    }
+
+    .top-what-we-do>.top-what-we-do-logo {
+        font-size: 150px;
+    }
+
+    .top-what-we-do>.what-we-do-heading {
+        font-size: 30px;
+    }
+
+    .top-what-we-do>.what-we-do-para {
+        font-size: 13px;
+    }
+
+    .reasons-section {
+        max-width: 860px;
+    }
+
+    .reasons-bg-text {
+        font-size: 150px;
+    }
+
+    .reasons-heading {
+        top: 90px;
+        margin-bottom: 120px;
+    }
+
+    .reasons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wework-wrap-content {
+        height: 850px;
+    }
+
+    .wework-section {
+        max-width: 860px;
+    }
+
+    .wework-bg-text {
+        font-size: 150px;
+    }
+
+    .wework-heading {
+        top: 90px;
+        margin-bottom: 120px;
+    }
+
+    .wework-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-us-main-section{
+        max-width: 860px;
+    }
+    .left-contact-side>.left-contact-heading{
+        font-size: 25px;
+    }
+}
+
+/* Large screens / 2K (1921px - 2560px) */
+@media only screen and (min-width: 1441px) and (max-width: 2560px) {
+    .wrap-about-content {
+        width: 100%;
+        height: 329.69px;
+        background: #101010;
+    }
+
+    .wrap-about-content>.main-about-hero-section {
+        max-width: 1400px;
+        height: 100%;
+        margin: 0 auto;
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-about-hero-section>.about-hero-hr {
+        width: 85px;
+        height: 5px;
+        background: #009dff;
+        border: none;
+    }
+
+    .main-about-hero-section>.about-hero-heading {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 56px;
+        color: #FFFFFF;
+    }
+
+    .what-we-do-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1400px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .what-we-do-main>.top-what-we-do {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 35px;
+        position: relative;
+        text-align: center;
+        padding: 50px 20px;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    /* Background large faded text */
+    .top-what-we-do>.top-what-we-do-logo {
+        font-size: 200px;
+        font-weight: 800;
+        color: rgba(68, 68, 68, 0.053);
+        /* faint grey look */
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+        white-space: nowrap;
+    }
+
+    /* Heading on top */
+    .top-what-we-do>.what-we-do-heading {
+        font-size: 36px;
+        font-weight: 700;
+        color: black;
+        line-height: 46px;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 50px;
+        top: 45px;
+    }
+
+    /* Paragraph below heading */
+    .top-what-we-do>.what-we-do-para {
+        font-size: 15px;
+        font-weight: 400;
+        color: #333;
+        line-height: 26px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+    }
+
+    .bottom-what-we-do>.what-we-do-card {
+        width: 440px;
+        height: 308px;
+    }
+
+    .wrap-industry-content>.main-industry-section {
+        max-width: 1400px;
+    }
+
+    .main-industry-section>.main-industry-heading {
+        font-size: 36px;
+    }
+
+    .main-industry-section>.bottom-industry-main-section {
+        gap: 90px;
+    }
+
+    .bottom-industry-main-section>ul>hr {
+        width: 265px;
+    }
+
+    .service-section-about-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1400px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .service-section-about-page>.top-what-we-do {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 35px;
+        position: relative;
+        text-align: center;
+        padding: 50px 20px;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    /* Background large faded text */
+    .top-what-we-do>.top-what-we-do-logo {
+        font-size: 200px;
+        font-weight: 800;
+        color: rgba(68, 68, 68, 0.053);
+        /* faint grey look */
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+        white-space: nowrap;
+    }
+
+    /* Heading on top */
+    .top-what-we-do>.what-we-do-heading {
+        font-size: 36px;
+        font-weight: 700;
+        color: black;
+        line-height: 46px;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 50px;
+        top: 45px;
+    }
+
+    /* Paragraph below heading */
+    .top-what-we-do>.what-we-do-para {
+        font-size: 15px;
+        font-weight: 400;
+        color: #333;
+        line-height: 26px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+    }
+
+    .reasons-section {
+        max-width: 1400px;
+    }
+
+    .reasons-container {
+        max-width: 1400px;
+    }
+
+    .reasons-bg-text {
+        font-size: 200px;
+    }
+
+    .reasons-heading {
+        top: 130px;
+        font-size: 36px;
+    }
+
+    .reasons-subheading {
+        margin-top: 200px;
+    }
+
+
+
+
+
+    .wework-section {
+        max-width: 1400px;
+    }
+
+    .wework-container {
+        max-width: 1400px;
+    }
+
+    .wework-bg-text {
+        font-size: 200px;
+    }
+
+    .wework-heading {
+        top: 130px;
+        font-size: 36px;
+    }
+
+    .wework-grid {
+        margin-top: 200px;
+    }
+
+    .wework-wrap-content {
+        width: 100%;
+        height: 750px;
+        background: #EBEBEB;
+    }
+
+    .contact-us-main-section{
+        max-width: 1400px;
+    }
+}

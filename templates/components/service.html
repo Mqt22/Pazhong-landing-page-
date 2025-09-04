@@ -1,0 +1,13 @@
+{% macro service(title, cards) %}
+<div class="service-category">
+    <h3 class="category-title">{{ title }}</h3>
+    <div class="category-grid">
+        {% for card in cards %}
+            <div class="service-card" id="{{ card.id }}">
+                <img src="{{ url_for('static', filename=card.img) }}" alt="{{ card.alt }}">
+                <p>{{ card.text }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endmacro %}

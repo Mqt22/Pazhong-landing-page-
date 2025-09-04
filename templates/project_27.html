@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj29.png', 'iMix Concrete') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-truck-monster",
+    "iMix Concrete",
+    "iMix Concrete is a corporate website for a concrete manufacturing company. The platform highlights high-quality construction materials, delivery services, and advanced mixing technology. Visitors can learn about product specifications, industry standards, and large-scale project partnerships. Clean visuals feature trucks, batching plants, and ready-mix solutions. The site focuses on reliability, safety, and timely delivery. With responsive layouts and easy navigation, iMix Concrete establishes a professional digital presence, offering clarity and trust for contractors, builders, and developers."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Product Showcase", "items": [
+        "Ready-mix concrete.",
+        "Construction solutions.",
+        "Detailed specs."
+    ]},
+    {"heading": "Industry Focus", "items": [
+        "Large projects.",
+        "Builders & contractors.",
+        "Safety standards."
+    ]},
+    {"heading": "Visual Content", "items": [
+        "Truck fleet gallery.",
+        "Plant images.",
+        "Delivery visuals."
+    ]},
+    {"heading": "Client Tools", "items": [
+        "Inquiry forms.",
+        "Service contact."
+    ]},
+    {"heading": "Responsive Layout", "items": [
+        "Cross-device access.",
+        "Fast performance.",
+        "Optimized design."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Promote iMix Concrete as a trusted supplier.",
+    "Support contractors with reliable solutions.",
+    "Build credibility in the construction market."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

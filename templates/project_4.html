@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+
+{{ prj_component.project_hero('images/pj9.png', 'Cyber Avanza') }}
+
+  {{ prj_component.project_detail(
+      "fa-solid fa-shield-halved",
+      "Cyber Avanza",
+      "Cyber Avanza is a technology solutions website focused on secure communication, collaboration, and enterprise infrastructure. The platform showcases offerings such as video conferencing, interactive displays, IP telephony, and cybersecurity services, helping organizations modernize their workplaces without compromising protection. A clean catalog layout, solution-driven pages, and clear CTAs guide buyers from discovery to inquiry. Content emphasizes reliability, after-sales support, and scalability, enabling IT teams and decision makers to evaluate options quickly. Mobile responsiveness and optimized performance ensure seamless browsing across devices."
+  ) }}
+
+  {{ prj_component.project_features([
+      {"heading": "Product & Solutions Overview", "items": [
+          "Clear categories for communication and security.",
+          "Solution pages that explain use cases.",
+          "Prominent CTAs for inquiries."
+      ]},
+      {"heading": "Showcase & Media", "items": [
+          "Hero banners for key solutions.",
+          "Feature highlights with visuals.",
+          "Downloadable spec sheets."
+      ]},
+      {"heading": "Catalog & Filtering", "items": [
+          "Organized product tiles.",
+          "Quick search by keyword.",
+          "Brand and category filters."
+      ]},
+      {"heading": "Client Support", "items": [
+          "Contact and quote request forms.",
+          "FAQ and basic troubleshooting."
+      ]},
+      {"heading": "Performance & Security", "items": [
+          "Responsive, mobile-first design.",
+          "Fast page load and caching.",
+          "HTTPS/SSL and best practices."
+      ]}
+  ]) }}
+
+  {{ prj_component.project_goals([
+      "Help enterprises evaluate and procure secure collaboration solutions.",
+      "Build trust with transparent specs, demos, and support pathways.",
+      "Increase qualified inquiries through clear CTAs and streamlined navigation."
+  ]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block body_class %}Project_20{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj24.png', 'Malir Development Authority') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-city",
+    "Malir Development Authority",
+    "The Malir Development Authority (MDA) site highlights residential housing schemes, urban planning, and infrastructure initiatives in Karachi. The platform is designed to inform citizens about available projects, application procedures, and public notices. Hero banners emphasize major schemes, while dedicated pages cover housing sectors, facilities, and eligibility. The site ensures transparency by publishing updates, guidelines, and downloadable forms. With a responsive structure, citizens and investors can access project details quickly from any device. MDA’s online presence builds trust by showcasing development milestones, governance policies, and city-planning initiatives."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Project Showcases", "items": [
+        "Housing scheme highlights.",
+        "Urban planning details.",
+        "Sector maps & layouts."
+    ]},
+    {"heading": "Public Resources", "items": [
+        "Application guidelines.",
+        "Notice board updates.",
+        "Downloadable forms."
+    ]},
+    {"heading": "Transparency Focus", "items": [
+        "Official government branding.",
+        "Clear project timelines.",
+        "Accessible communication."
+    ]},
+    {"heading": "Investor Engagement", "items": [
+        "Eligibility details.",
+        "Payment plan notes."
+    ]},
+    {"heading": "Responsive Structure", "items": [
+        "Optimized for mobile use.",
+        "Quick page navigation.",
+        "Fast-loading resources."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Provide citizens with accurate project information.",
+    "Support transparency in housing and infrastructure.",
+    "Engage investors and applicants effectively."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block body_class %}Project 1{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+
+
+    <section class="project-hero-section">
+        <img src="{{ url_for('static', filename='images/pj1.png') }}" alt="">
+    </section>
+    <section class="project-detail-main">
+        <h1 class="project-detail-heading"><i class="fa-solid fa-globe"></i>&nbsp; Global Auto Traders</h1>
+        <p class="project-detail-para">Global Auto Traders is a professional automotive marketplace platform designed to simplify the process of buying and selling vehicles. The platform serves as a centralized hub for dealerships and individual buyers, offering an intuitive browsing experience, a powerful search engine, and well-structured categories to connect users with the right cars quickly and effectively.</p>
+    </section>
+
+    <section class="features-wrapper">
+    <h2>Key Features</h2>
+    <div class="features-grid">
+      
+      <div class="feature-box">
+        <h3>Hero Section with Inventory Highlight</h3>
+        <ul>
+          <li>Prominent banner featuring a sleek vehicle image.</li>
+          <li>Clear callout (“500+ Vehicles Available”) emphasizes trust and availability.</li>
+          <li>Dealer login option ensures easy access for partners and sellers.</li>
+        </ul>
+      </div>
+
+      <div class="feature-box">
+        <h3>Smart Vehicle Search</h3>
+        <ul>
+          <li>Tab-based filters for All, New, and Used vehicles.</li>
+          <li>Dropdown selectors for Make, Model, and Year.</li>
+          <li>One-click Search Button styled with a high-contrast green for visibility.</li>
+        </ul>
+      </div>
+
+      <div class="feature-box">
+        <h3>Browse by Category</h3>
+        <ul>
+          <li>Quick access options to browse by Make (BMW, Ford, Honda, etc.).</li>
+          <li>Options to browse by Body Type (SUV, Convertible, Sedan, Hatchback, etc.).</li>
+          <li>Clean icons and visual cues for easy navigation.</li>
+        </ul>
+      </div>
+
+      <div class="feature-box">
+        <h3>Dealer Tools</h3>
+        <ul>
+          <li>Dedicated Dealer Login area for managing inventory.</li>
+          <li>Inventory listing capabilities with brand visibility.</li>
+        </ul>
+      </div>
+
+      <div class="feature-box">
+        <h3>Modern Design & Branding</h3>
+        <ul>
+          <li>Professional, automotive-inspired branding with black/green accents.</li>
+          <li>Clear typography and strong visuals ensure credibility.</li>
+          <li>Responsive layout suitable for desktop and mobile devices.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+  
+  <section class="goals-wrapper">
+    <div class="goals-heading">
+      <i class="fas fa-bullseye"></i> Goals
+    </div>
+    <ul class="goals-list">
+      <li>Provide a seamless car search experience for buyers.</li>
+      <li>Empower dealers with tools to manage and showcase inventory.</li>
+      <li>Build a trustworthy, modern platform that enhances user engagement and conversions.</li>
+    </ul>
+  </section>
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

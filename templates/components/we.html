@@ -1,0 +1,19 @@
+{# macros/project_gallery.html #}
+{% macro we(projects, view_more_link='#') %}
+<section class="wework-main-section">
+    <section class="wework-project-section">
+        <div class="project-grid">
+            {% for project in projects %}
+                {% if project %}
+                    <div class="wework-box">
+                        <a href="{{ project.link }}">
+                            <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.name }}">
+                        </a>
+                        <p class="wework-box-para">{{ project.name }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+</section>
+{% endmacro %}

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj33.png', 'BQATI - Bin Qasim Association of Trade & Industry') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-warehouse",
+    "BQATI - Bin Qasim Association of Trade & Industry",
+    "The BQATI website highlights the role of the association in representing industries located in the Bin Qasim industrial area. It provides information on advocacy, industry news, and member services. Visitors can access publications, updates on policies, and resources for businesses. Clean layouts emphasize credibility, while responsive design ensures easy navigation. BQATI positions itself as a key voice for industrial growth, business support, and collaboration in Pakistan’s trade and manufacturing sector."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Association Info", "items": [
+        "Overview & mission.",
+        "Leadership team.",
+        "Industry role."
+    ]},
+    {"heading": "Business Support", "items": [
+        "Policy advocacy.",
+        "Trade updates.",
+        "Member services."
+    ]},
+    {"heading": "Publications", "items": [
+        "Reports & magazines.",
+        "Announcements.",
+        "Industry news."
+    ]},
+    {"heading": "Member Tools", "items": [
+        "Directory access.",
+        "Contact support."
+    ]},
+    {"heading": "Responsive Layout", "items": [
+        "Mobile-friendly.",
+        "Optimized pages.",
+        "Professional design."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Promote industrial and trade development in Bin Qasim.",
+    "Support businesses with advocacy and resources.",
+    "Build a strong voice for member industries."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}
+
+

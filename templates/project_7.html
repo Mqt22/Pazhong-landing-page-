@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+
+{{ prj_component.project_hero('images/pj7.png', 'DA Natural') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-leaf",
+    "DA Natural",
+    "DA Natural is an online health and wellness store designed to promote natural remedies, organic supplements, and healthy living products. The platform highlights categories for herbal medicines, skincare, and wellness essentials, making it easy for customers to discover natural alternatives for a healthier lifestyle. With a clean and product-focused layout, DA Natural delivers credibility and ease of shopping while educating visitors about natural solutions. The responsive design and intuitive navigation provide a seamless experience across devices, ensuring that health-conscious customers can browse and purchase with confidence."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Natural Product Range", "items": [
+        "Herbal and organic supplements.",
+        "Wellness and skincare categories.",
+        "Alternative medicine products."
+    ]},
+    {"heading": "Educational Content", "items": [
+        "Health tips and remedies.",
+        "Informative product descriptions.",
+        "Blog-style updates."
+    ]},
+    {"heading": "User-Friendly Layout", "items": [
+        "Organized product categories.",
+        "Simple filtering system.",
+        "Quick access to offers."
+    ]},
+    {"heading": "Customer Convenience", "items": [
+        "Secure checkout system.",
+        "Nationwide delivery options."
+    ]},
+    {"heading": "Responsive Design", "items": [
+        "Optimized for desktop and mobile.",
+        "Fast-loading catalog pages.",
+        "Easy navigation for all users."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Promote healthy living with natural remedies.",
+    "Provide easy access to organic wellness products.",
+    "Build trust with educational and reliable content."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

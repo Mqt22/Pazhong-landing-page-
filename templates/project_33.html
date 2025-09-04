@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj35.png', 'H.Ganny & Company') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-laptop",
+    "H.Ganny & Company",
+    "H.Ganny & Company is a corporate IT solutions provider website showcasing hardware, software, and technology products. The platform highlights partnerships with global brands like Dell, HP, Microsoft, and Lenovo. Visitors can explore product categories, pricing, and corporate services. Clean layouts focus on professionalism, while responsive design ensures accessibility. H.Ganny builds trust by presenting authentic partnerships, supporting customers with reliable IT solutions, and positioning itself as a trusted technology supplier."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Brand Partners", "items": [
+        "Dell and HP.",
+        "Microsoft software.",
+        "Lenovo and Acer."
+    ]},
+    {"heading": "Product Categories", "items": [
+        "Laptops and PCs.",
+        "Accessories.",
+        "Software solutions."
+    ]},
+    {"heading": "Corporate Services", "items": [
+        "B2B solutions.",
+        "Product distribution.",
+        "After-sales support."
+    ]},
+    {"heading": "Customer Focus", "items": [
+        "Price list.",
+        "Support channels."
+    ]},
+    {"heading": "Responsive Layout", "items": [
+        "Cross-device ready.",
+        "Fast browsing.",
+        "Optimized UX."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Promote H.Ganny’s IT solutions portfolio.",
+    "Showcase brand partnerships for trust.",
+    "Support corporate buyers with reliable services."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

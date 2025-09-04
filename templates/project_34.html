@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj32.png', 'Faratech') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-shirt",
+    "Faratech",
+    "Faratech is a corporate website for a textile manufacturer and exporter. The platform highlights fabrics, garments, and apparel solutions. Visitors can explore product categories, industry collaborations, and brand partnerships. Clean visuals emphasize modern textiles and fashion appeal. Responsive layouts enhance navigation for buyers and partners. Faratech builds trust through transparency, showcasing production capabilities and client collaborations with global retailers."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Product Catalog", "items": [
+        "Garments.",
+        "Fabrics.",
+        "Apparel solutions."
+    ]},
+    {"heading": "Industry Focus", "items": [
+        "Global exports.",
+        "Retail partners.",
+        "Manufacturing strength."
+    ]},
+    {"heading": "Visual Branding", "items": [
+        "Product galleries.",
+        "Modern design.",
+        "Clear layouts."
+    ]},
+    {"heading": "Corporate Info", "items": [
+        "Company history.",
+        "Brand collaborations."
+    ]},
+    {"heading": "Responsive Layout", "items": [
+        "Cross-device ready.",
+        "Optimized performance.",
+        "Smooth navigation."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Promote Faratech’s textiles and apparel exports.",
+    "Build credibility through partnerships.",
+    "Showcase global manufacturing capabilities."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

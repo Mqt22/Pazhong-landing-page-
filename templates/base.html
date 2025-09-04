@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>{% block title %}Pazhong - Automation{% endblock title %}</title>
+    <meta name="description"
+        content="Pazhong Automations is a software and product development company building scalable, innovative solutions that transform ideas into reality.">
+    <meta name="keywords"
+        content="Pazhong, Automations, Software Development, Product Development, Web Apps, Mobile Apps, Cloud Solutions">
+    <meta name="author" content="Pazhong Automations">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.pazhong.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Pazhong Automations - Software & Product Development">
+    <meta property="og:description" content="We create smart, scalable digital solutions to help businesses grow.">
+    <meta property="og:image" content="{{ url_for('static', filename='images/og-image.jpg') }}">
+    <meta property="og:url" content="https://www.pazhong.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pazhong Automations - Software & Product Development">
+    <meta name="twitter:description" content="We create smart, scalable digital solutions to help businesses grow.">
+    <meta name="twitter:image" content="{{ url_for('static', filename='images/og-image.jpg') }}">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block styles %}{% endblock styles %}
+    <!-- Google Fonts: Poppins (optimized load) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body class="{% block body_class %}{% endblock body_class %}">
+
+    {% include "nav.html" %}
+
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+    {% include "footer.html" %}
+
+    {# All GLobal script file here #}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,   // animation duration in ms
+            once: true,       // whether animation should happen only once
+            offset: 100,      // offset (px) from the original trigger point
+        });
+    </script>
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+    {% block scripts %}{% endblock scripts %}
+    {#
+    <script src="{{ url_for('static', filename='js/timing.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/word.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/faq.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/test.js') }}"></script>#}
+    {# All script file Ends here #}
+</body>
+</html>

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj34.png', 'PBEA - Pakistan Bedwear Exporter Association') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-bed",
+    "PBEA - Pakistan Bedwear Exporter Association",
+    "The PBEA website represents the Pakistani bedwear export industry, providing resources for exporters, members, and international buyers. The platform highlights Pakistan’s strengths in textile manufacturing, quality standards, and export growth. Dedicated sections present association goals, industry statistics, and publications. Clean visuals reinforce professionalism, while responsive layouts ensure global accessibility. The website builds trust with certifications, member directories, and advocacy for exporters. PBEA positions itself as a voice for Pakistan’s bedwear industry in the international market."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Association Overview", "items": [
+        "Mission & vision.",
+        "Industry representation.",
+        "Export advocacy."
+    ]},
+    {"heading": "Industry Data", "items": [
+        "Textile stats.",
+        "Export reports.",
+        "Growth trends."
+    ]},
+    {"heading": "Member Resources", "items": [
+        "Directory listings.",
+        "Support tools.",
+        "Policy updates."
+    ]},
+    {"heading": "Global Outreach", "items": [
+        "International buyers.",
+        "Certifications."
+    ]},
+    {"heading": "Responsive Layout", "items": [
+        "Accessible worldwide.",
+        "Fast browsing.",
+        "Professional interface."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Strengthen Pakistan’s bedwear export industry.",
+    "Support members with resources and advocacy.",
+    "Promote Pakistani textiles globally."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}
+
+

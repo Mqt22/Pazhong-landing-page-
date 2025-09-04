@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body_class %}Project_20{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj30.png', 'Pakistan Gems & Jewellery Development Company') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-gem",
+    "Pakistan Gems & Jewellery Development Company",
+    "This website promotes Pakistan’s gems and jewelry sector, highlighting initiatives for training, industry support, and global trade promotion. The platform showcases development projects, partnerships, and resources for artisans, traders, and exporters. It emphasizes sector growth through innovation, design, and compliance with international standards. Key pages cover government initiatives, training programs, and export opportunities. The site builds trust by displaying policy support and collaboration with industry stakeholders. Responsive layouts ensure easy browsing for entrepreneurs, exporters, and investors exploring opportunities in the jewelry sector."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Industry Promotion", "items": [
+        "Gems and jewelry initiatives.",
+        "Training programs listed.",
+        "Trade promotion events."
+    ]},
+    {"heading": "Government Backing", "items": [
+        "Policy alignment.",
+        "Collaboration details.",
+        "Sector growth emphasis."
+    ]},
+    {"heading": "Exporter Resources", "items": [
+        "Guides for traders.",
+        "Compliance information.",
+        "Market entry tips."
+    ]},
+    {"heading": "Showcase & Media", "items": [
+        "Event galleries.",
+        "Industry news updates."
+    ]},
+    {"heading": "Mobile Experience", "items": [
+        "Responsive design.",
+        "Optimized for all devices.",
+        "Fast, accessible pages."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Promote gems and jewelry sector development.",
+    "Provide resources to artisans and exporters.",
+    "Attract global interest and investments."
+]) }}
+
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

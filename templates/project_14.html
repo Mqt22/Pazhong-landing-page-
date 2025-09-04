@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj15.png', 'Adnan Jaskani') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-chalkboard-user",
+    "Adnan Jaskani",
+    "A personal brand site for an award-winning CSS/PMS/PCS mentor and coach, built to highlight training programs, speaking, and mentoring results. The hero showcases authority with concise positioning, while sections outline courses, formats, success metrics, and testimonials. Clear CTAs invite bookings for workshops and one-to-one coaching. The design uses bold blocks, readable type, and confident color to support a premium instructor vibe. Responsive layouts keep content legible on mobile, making it easy for learners and organizations to engage."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Authority & Positioning", "items": [
+        "Awards and credentials.",
+        "Audience and outcomes.",
+        "Press or highlights."
+    ]},
+    {"heading": "Programs & Formats", "items": [
+        "Workshops and bootcamps.",
+        "1:1 mentoring options.",
+        "Curriculum outlines."
+    ]},
+    {"heading": "Social Proof", "items": [
+        "Testimonials and metrics.",
+        "Client logos where allowed."
+    ]},
+    {"heading": "Conversion Paths", "items": [
+        "Book a session CTAs.",
+        "Contact & inquiries."
+    ]},
+    {"heading": "Responsive Brand", "items": [
+        "Strong visual identity.",
+        "Fast, mobile-friendly pages.",
+        "Accessible typography."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Showcase expertise and training outcomes.",
+    "Drive bookings for mentoring and workshops.",
+    "Build a credible, memorable personal brand."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

@@ -1,0 +1,45 @@
+{# templates/components/prj_component.html #}
+
+{% macro project_hero(image, alt_text="Project Image") %}
+<section class="project-hero-section">
+  <img src="{{ url_for('static', filename=image) }}" alt="{{ alt_text }}">
+</section>
+{% endmacro %}
+
+{% macro project_detail(icon, title, description) %}
+<section class="project-detail-main">
+  <h1 class="project-detail-heading"><i class="{{icon}}"></i>&nbsp; {{ title }}</h1>
+  <p class="project-detail-para">{{ description }}</p>
+</section>
+{% endmacro %}
+
+{% macro project_features(features) %}
+<section class="features-wrapper">
+  <h2>Key Features</h2>
+  <div class="features-grid">
+    {% for f in features %}
+      <div class="feature-box">
+        <h3>{{ f["heading"] }}</h3>
+        <ul>
+          {% for item in f["items"] %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endmacro %}
+
+{% macro project_goals(goals) %}
+<section class="goals-wrapper">
+  <div class="goals-heading">
+    <i class="fas fa-bullseye"></i> Goals
+  </div>
+  <ul class="goals-list">
+    {% for g in goals %}
+      <li>{{ g }}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endmacro %}

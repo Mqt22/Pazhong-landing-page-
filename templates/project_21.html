@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj23.png', 'Daruladviat') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-prescription-bottle-medical",
+    "Daruladviat",
+    "Daruladviat is a healthcare and pharmaceutical website that offers a wide range of herbal and medical products. The platform focuses on natural remedies, showcasing trusted brands and products tailored to consumer needs. Categories highlight medicines, supplements, and healthcare essentials. A user-friendly design ensures customers can browse, learn, and order products conveniently. The site emphasizes authenticity, health benefits, and safe usage, while providing educational content. Responsive layouts ensure accessibility for patients, families, and retailers across devices."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Product Categories", "items": [
+        "Herbal remedies.",
+        "Supplements and tonics.",
+        "Healthcare essentials."
+    ]},
+    {"heading": "Educational Content", "items": [
+        "Usage guidance.",
+        "Health benefit details.",
+        "Informative resources."
+    ]},
+    {"heading": "Customer Tools", "items": [
+        "Easy browsing filters.",
+        "Shopping cart system.",
+        "Clear product descriptions."
+    ]},
+    {"heading": "Trust Building", "items": [
+        "Authentic products.",
+        "Safe usage emphasized."
+    ]},
+    {"heading": "Responsive Layout", "items": [
+        "Optimized navigation.",
+        "Accessible design.",
+        "Mobile-ready store."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Promote safe and natural healthcare products.",
+    "Educate customers on remedies and supplements.",
+    "Build a trusted brand presence online."
+]) }}
+
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

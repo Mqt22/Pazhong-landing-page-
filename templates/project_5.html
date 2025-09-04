@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+
+{{ prj_component.project_hero('images/pj5.png', 'Maryam Books') }}
+
+  {{ prj_component.project_detail(
+      "fa-solid fa-book",
+      "Maryam Books",
+      "Maryam Books is an online bookstore that provides a wide range of academic, school, and reference materials with convenient delivery options. The platform focuses on making learning resources easily available for students, parents, and educators. Featuring categories for preschool, academic, Cambridge, and Sindh board titles, the site ensures quick navigation and access to bestsellers. With seasonal discounts and a structured catalog, Maryam Books creates a reliable shopping space that simplifies textbook purchasing. Responsive design and an easy checkout process enhance the customer experience while supporting nationwide delivery needs."
+  ) }}
+
+  {{ prj_component.project_features([
+      {"heading": "Diverse Book Categories", "items": [
+          "Preschool and academic materials.",
+          "Cambridge and Sindh board books.",
+          "Dictionaries and reference titles."
+      ]},
+      {"heading": "Promotions & Discounts", "items": [
+          "Seasonal offers with savings.",
+          "Highlighted banners for deals.",
+          "Special back-to-school campaigns."
+      ]},
+      {"heading": "Easy Navigation", "items": [
+          "Well-structured menu bar.",
+          "Category-specific landing pages.",
+          "Quick access to new arrivals."
+      ]},
+      {"heading": "Customer Convenience", "items": [
+          "Book reservation system.",
+          "Nationwide express delivery."
+      ]},
+      {"heading": "Responsive Design", "items": [
+          "Optimized for desktop and mobile.",
+          "Fast loading catalog pages.",
+          "Secure checkout process."
+      ]}
+  ]) }}
+
+  {{ prj_component.project_goals([
+      "Simplify access to academic and school books nationwide.",
+      "Build a user-friendly bookstore platform with fast delivery.",
+      "Support parents and students through affordable deals."
+  ]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

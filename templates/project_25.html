@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj22.png', 'Anawaz Electronics - UAE') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-tv",
+    "Anawaz Electronics - UAE",
+    "Anawaz Electronics – UAE is an e-commerce platform offering electronics, gadgets, and appliances for UAE customers. The website highlights featured products, promotions, and a modern catalog. Clean layouts emphasize clarity and product-focused visuals. Customers can browse categories like smartphones, home appliances, and accessories with detailed specifications and prices. The site ensures credibility with secure checkout, responsive design, and professional branding. Anawaz Electronics delivers a trusted digital presence for electronics shopping in the UAE market."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Product Categories", "items": [
+        "Smartphones.",
+        "Home appliances.",
+        "Electronics accessories."
+    ]},
+    {"heading": "E-Commerce Features", "items": [
+        "Shopping cart.",
+        "Checkout system.",
+        "Discount promotions."
+    ]},
+    {"heading": "User Experience", "items": [
+        "Clean catalog design.",
+        "Product detail pages.",
+        "Simple navigation."
+    ]},
+    {"heading": "Customer Support", "items": [
+        "Inquiry forms.",
+        "Contact options."
+    ]},
+    {"heading": "Responsive Layout", "items": [
+        "Mobile-ready shopping.",
+        "Fast performance.",
+        "Optimized visuals."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Provide a modern electronics shopping experience in the UAE.",
+    "Highlight key product categories and offers.",
+    "Build brand trust with secure and responsive design."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

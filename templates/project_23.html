@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj27.png', 'Bobby Arts') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-paintbrush",
+    "Bobby Arts",
+    "Bobby Arts is a creative design studio website highlighting interior solutions, furniture concepts, and artistic decor. The platform presents the studio’s portfolio with emphasis on craftsmanship, innovation, and aesthetics. Visitors can browse visual showcases of modern interiors, explore artistic furniture collections, and review design services. Clean, elegant layouts reinforce brand identity while offering easy navigation. Bobby Arts positions itself as a trusted creative hub for unique design experiences, providing both inspiration and practical services for clients seeking artistic and stylish living environments."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Creative Portfolio", "items": [
+        "Interior showcases.",
+        "Artistic furniture.",
+        "Modern design gallery."
+    ]},
+    {"heading": "Service Sections", "items": [
+        "Interior design solutions.",
+        "Furniture customization.",
+        "Consultancy offerings."
+    ]},
+    {"heading": "Brand Identity", "items": [
+        "Elegant layouts.",
+        "Modern aesthetics.",
+        "Professional tone."
+    ]},
+    {"heading": "Client Engagement", "items": [
+        "Inspiration galleries.",
+        "Contact forms."
+    ]},
+    {"heading": "Responsive Layout", "items": [
+        "Mobile-friendly design.",
+        "Optimized loading.",
+        "Accessible visuals."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Showcase Bobby Arts’ creative expertise.",
+    "Promote interior and furniture design services.",
+    "Build a strong online design identity."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

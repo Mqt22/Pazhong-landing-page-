@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj17.png', 'iHealth Care Centre') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-user-nurse",
+    "iHealth Care Centre",
+    "iHealth Care Centre is a medical website designed to communicate trust, accessibility, and comprehensive healthcare services. The platform highlights patient care, clinic facilities, and staff expertise with a professional visual approach. The homepage includes service categories, special treatments, and appointment booking options, while featuring patient-centric visuals to inspire confidence. iHealth Care Centre emphasizes preventive care, modern facilities, and qualified professionals. With responsive design and a secure contact system, it ensures patients can quickly access information, schedule visits, and connect with specialists from any device, offering a seamless digital healthcare experience."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Healthcare Services", "items": [
+        "General consultations.",
+        "Specialized treatments.",
+        "Preventive care options."
+    ]},
+    {"heading": "Patient-Centered Content", "items": [
+        "Staff credentials showcased.",
+        "Facility imagery.",
+        "Trust-building messaging."
+    ]},
+    {"heading": "Booking Features", "items": [
+        "Online appointment forms.",
+        "Contact numbers displayed.",
+        "Emergency access info."
+    ]},
+    {"heading": "Modern Presence", "items": [
+        "Professional branding.",
+        "Medical imagery.",
+        "Structured service pages."
+    ]},
+    {"heading": "Responsive & Secure", "items": [
+        "Mobile-first design.",
+        "Secure patient inquiries.",
+        "Optimized load speed."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Provide a clear digital presence for healthcare services.",
+    "Make it easy for patients to book appointments online.",
+    "Build trust with transparent, professional content."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

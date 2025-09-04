@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj19.png', 'Zaaviaa Solutions') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-certificate",
+    "AGS – American Global Standards",
+    "AGS – American Global Standards is a certification services platform highlighting compliance, ISO standards, and quality assurance. The site showcases certification categories across industries, providing details on scope, requirements, and processes. The design emphasizes credibility with trust signals, sector-focused visuals, and a professional tone. Organized certification cards simplify navigation for companies seeking compliance guidance. With responsive layouts and optimized access, AGS makes it easy for businesses to explore certification options, validate their compliance needs, and initiate the certification process with confidence and clarity."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Certification Catalog", "items": [
+        "ISO standard categories.",
+        "Sector-specific solutions.",
+        "Compliance scope details."
+    ]},
+    {"heading": "Trust Signals", "items": [
+        "Accreditation notes.",
+        "Professional visuals.",
+        "Quality-first messaging."
+    ]},
+    {"heading": "Clear Navigation", "items": [
+        "Card-based layout.",
+        "Quick certification overviews.",
+        "Simple inquiry CTAs."
+    ]},
+    {"heading": "Business Engagement", "items": [
+        "Application process outlined.",
+        "Direct inquiry forms."
+    ]},
+    {"heading": "Responsive Structure", "items": [
+        "Optimized for all devices.",
+        "Fast access to categories.",
+        "Accessible browsing."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Provide clarity on certification and compliance processes.",
+    "Promote AGS as a trusted certification authority.",
+    "Simplify client access to certification applications."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

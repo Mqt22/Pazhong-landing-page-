@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+
+{{ prj_component.project_hero('images/pj4.png', 'Chicoo Baby World') }}
+
+  {{ prj_component.project_detail(
+      "fa-solid fa-handshake",
+      "America Pakistan Business Development Forum",
+      "The America Pakistan Business Development Forum (APBDF) is a professional platform dedicated to strengthening economic ties between the United States and Pakistan. The website highlights initiatives, events, and resources that empower businesses to connect, collaborate, and expand globally. With an emphasis on networking and information sharing, the APBDF platform provides a strong digital presence to showcase bilateral opportunities, trade policies, and success stories."
+  ) }}
+
+  {{ prj_component.project_features([
+      {"heading": "Informative Layout", "items": [
+          "Clear sections for news.",
+          "Trade resources library.",
+          "Event highlights."
+      ]},
+      {"heading": "Forum Updates", "items": [
+          "Announcements.",
+          "Partnership news.",
+          "Success stories."
+      ]},
+      {"heading": "Member Resources", "items": [
+          "Business directory.",
+          "Policy documents.",
+          "Whitepapers."
+      ]},
+      {"heading": "Networking Tools", "items": [
+          "Contact forms.",
+          "Meeting scheduler."
+      ]},
+      {"heading": "Modern Web Presence", "items": [
+          "Professional design.",
+          "Mobile responsiveness.",
+          "Optimized for speed."
+      ]}
+  ]) }}
+
+  {{ prj_component.project_goals([
+      "Strengthen U.S.–Pakistan trade and investment ties.",
+      "Provide businesses with knowledge and resources.",
+      "Build a trusted platform for cross-border collaboration."
+  ]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

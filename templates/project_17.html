@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj25.png', 'Zaaviaa Solutions') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-globe",
+    "Zaaviaa Solutions",
+    "Zaaviaa Solutions is a corporate solutions provider showcasing services aimed at building sustainable, connected, and technology-driven systems. The website emphasizes innovation, corporate partnerships, and advanced solutions for industries worldwide. Bold branding and concise content highlight mission statements, service pillars, and global reach. Visitors can explore solutions tailored to sustainability, IT, and infrastructure, with strong emphasis on impact-driven approaches. Responsive layouts and professional visuals reinforce credibility and modern corporate identity, while calls to action make it easy to connect for partnerships and inquiries."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Corporate Identity", "items": [
+        "Bold professional branding.",
+        "Strong mission statement.",
+        "Impact-focused messaging."
+    ]},
+    {"heading": "Service Offerings", "items": [
+        "Sustainability solutions.",
+        "IT and infrastructure support.",
+        "Custom business services."
+    ]},
+    {"heading": "Global Focus", "items": [
+        "Worldwide reach messaging.",
+        "Industry-specific content.",
+        "Partnership-driven approach."
+    ]},
+    {"heading": "Engagement Tools", "items": [
+        "Contact forms.",
+        "Inquiry pathways.",
+        "Networking opportunities."
+    ]},
+    {"heading": "Responsive Design", "items": [
+        "Corporate-friendly layouts.",
+        "Fast and optimized.",
+        "Accessible on all devices."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Promote Zaaviaa as a global corporate solutions provider.",
+    "Build credibility through professional branding.",
+    "Encourage partnerships and sustainable collaborations."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

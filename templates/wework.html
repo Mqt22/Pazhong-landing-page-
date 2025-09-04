@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block body_class %}Services-page{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/wework.css') }}">{% endblock styles %}
+{% block content %}
+{% from "components/we.html" import we %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+<section class="wrap-wework-content">
+    <img src="{{ url_for('static', filename='images/intro-bg.png') }}" alt="">
+    <section class="main-wework-hero-section">
+        <hr class="wework-hero-hr">
+        <h2 class="wework-hero-heading">Websites</h2>
+    </section>
+</section>
+<section class="what-we-do-main">
+    <section class="top-what-we-do">
+        <span class="top-what-we-do-logo">WWW</span>
+        <h2 class="what-we-do-heading">Check our latest awesome creative works</h2>
+        <p class="what-we-do-para">It's crafted with the latest trend of design & coded with all modern approaches. It's a robust & multi-dimensional usable template. </p>
+    </section>
+</section>
+
+
+{{ we(
+    [
+        {'image': 'images/pj1.png', 'name': 'Global Auto Traders', 'link': 'project_1'},
+        {'image': 'images/pj2.png', 'name': 'Chicoo Baby World', 'link': 'project_2'},
+        {'image': 'images/pj4.png', 'name': 'America Pakistan Business Development Forum', 'link': 'project_3'},
+        {'image': 'images/pj9.png', 'name': 'Cyber Avanza', 'link': 'project_4'},
+        {'image': 'images/pj5.png', 'name': 'Maryam Books', 'link': 'project_5'},
+        {'image': 'images/pj6.png', 'name': 'Lucobot', 'link': 'project_6'},
+        {'image': 'images/pj7.png', 'name': 'DA Natural', 'link': 'project_7'},
+        {'image': 'images/pj8.png', 'name': 'Unique & Shine LTD', 'link': 'project_8'},
+        {'image': 'images/pj10.png', 'name': 'Cyber Avanza', 'link': 'project_9'},
+        {'image': 'images/pj11.png', 'name': 'Digital Dry Cleaners UK', 'link': 'project_10'},
+        {'image': 'images/pj12.png', 'name': 'Salt Pakistan', 'link': 'project_11'},
+        {'image': 'images/pj13.png', 'name': 'IIW Group - Formerly Irshad Iron Works', 'link': 'project_12'},
+        {'image': 'images/pj14.png', 'name': 'Entertech Solutions', 'link': 'project_13'},
+        {'image': 'images/pj15.png', 'name': 'Adnan Jaskani', 'link': 'project_14'},
+        {'image': 'images/pj16.png', 'name': 'Cafe Classic', 'link': 'project_15'},
+        {'image': 'images/pj17.png', 'name': 'iHealth Care Centre', 'link': 'project_16'},
+        {'image': 'images/pj25.png', 'name': 'Zaaviaa Solutions', 'link': 'project_17'},
+        {'image': 'images/pj19.png', 'name': 'AGS - American Global Standards', 'link': 'project_18'},
+        {'image': 'images/pj24.png', 'name': 'Malir Development Authority', 'link': 'project_19'},
+        {'image': 'images/pj30.png', 'name': 'Pakistan Gems & Jewellery Development Company', 'link': 'project_20'},
+        {'image': 'images/pj23.png', 'name': 'Daruladviat', 'link': 'project_21'},
+        {'image': 'images/pj21.png', 'name': 'Dr.Hamid General Homeo (PVT) LTD', 'link': 'project_22'},
+        {'image': 'images/pj27.png', 'name': 'Bobby Arts', 'link': 'project_23'},
+        {'image': 'images/pj31.png', 'name': 'Idrees Textile Mills LTD', 'link': 'project_24'},
+        {'image': 'images/pj22.png', 'name': 'Anawaz Electronics - UAE', 'link': 'project_25'},
+        {'image': 'images/pj26.png', 'name': 'Veintiseis - Canada', 'link': 'project_26'},
+        {'image': 'images/pj29.png', 'name': 'iMix Concrete', 'link': 'project_27'},
+        {'image': 'images/pj20.png', 'name': 'Great Gwadar', 'link': 'project_28'},
+        {'image': 'images/pj34.png', 'name': 'PBEA - Pakistan Bedwear Exporter Association', 'link': 'project_29'},
+        {'image': 'images/pj33.png', 'name': 'BQATI - Bin Qasim Association of Trade & Industry', 'link': 'project_30'},
+        {'image': 'images/pj28.png', 'name': 'Sadabahar Wedding', 'link': 'project_31'},
+        {'image': 'images/pj18.png', 'name': 'Sun Rice Foods', 'link': 'project_32'},
+        {'image': 'images/pj35.png', 'name': 'H.Ganny & Company', 'link': 'project_33'},
+        {'image': 'images/pj32.png', 'name': 'Faratech', 'link': 'project_34'}
+    ]
+) }}
+
+
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

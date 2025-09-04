@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj14.png', 'Entertech Solutions') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-laptop-code",
+    "Entertech Solutions",
+    "Entertech Solutions is a software services website positioning the team as a partner for custom development, integrations, and product design. A confident hero message leads into service pillars—web apps, mobile, cloud, and automation—each supported by plain-language benefits and deliverables. Case-study callouts, process steps, and tech stacks help prospects understand capability and fit. Conversion paths are streamlined with consultation forms and calendar prompts. The visual style is clean and corporate, balancing personality with professionalism, while responsive performance keeps navigation fast across devices."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Service Pillars", "items": [
+        "Web & mobile development.",
+        "Cloud and DevOps.",
+        "Automation & integrations."
+    ]},
+    {"heading": "Proof of Work", "items": [
+        "Case-study highlights.",
+        "Client results snapshots.",
+        "Tech-stack badges."
+    ]},
+    {"heading": "Process & Approach", "items": [
+        "Discovery to delivery steps.",
+        "Collaboration practices.",
+        "QA and support notes."
+    ]},
+    {"heading": "Lead Capture", "items": [
+        "Consultation request forms.",
+        "Scheduling prompts."
+    ]},
+    {"heading": "UX & Performance", "items": [
+        "Readable, focused layout.",
+        "Responsive across devices.",
+        "Optimized load speed."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Present capabilities clearly to non-technical buyers.",
+    "Increase qualified consultations and proposals.",
+    "Show credibility through results and process."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

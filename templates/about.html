@@ -1,0 +1,216 @@
+{% extends "base.html" %}
+{% block body_class %}about-page{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">{% endblock styles %}
+{% block content %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+
+    {% with heading="About us" %}
+        {% include "components/intro.html" %}
+    {% endwith %}
+
+<section class="what-we-do-main">
+    <section class="top-what-we-do">
+        <span class="top-what-we-do-logo">VIVID</span>
+        <h2 class="what-we-do-heading">Know More About What We Do</h2>
+        <p class="what-we-do-para">We are a creative company, who works with passion and love. We provide the best
+            services you need. We help you to get better, We take pride in helping our clients deliver marvelous results
+            when it comes to their projects. From data to performance, we’ve got you covered. </p>
+    </section>
+    <section class="bottom-what-we-do">
+        <div class="what-we-do-card">
+            <img src="{{ url_for('static', filename='images/flag.png') }}" alt="Wining image"
+                class="what-we-do-card-img">
+            <h1 class="what-we-do-card-headign">Vission & Mission</h1>
+            <p class="what-we-do-card-para">Our Vision and Mission are both encouraging our team to accomplish the goal.
+                We recognize the clients' requirements & provide the best solution.</p>
+        </div>
+
+        <div class="what-we-do-card">
+            <img src="{{ url_for('static', filename='images/challenges.png') }}" alt="Challenges image"
+                class="what-we-do-card-img">
+            <h1 class="what-we-do-card-headign">Challenges</h1>
+            <p class="what-we-do-card-para">We take pride in helping our clients deliver marvelous results when it comes
+                to their projects. From data to performance, we’ve got you covered.</p>
+        </div>
+
+        <div class="what-we-do-card">
+            <img src="{{ url_for('static', filename='images/team.png') }}" alt="Team IMage" class="what-we-do-card-img">
+            <h1 class="what-we-do-card-headign">Team</h1>
+            <p class="what-we-do-card-para">Meet our leaders and the hard-working
+                personalities who deliver innovative concepts
+                to corporations like yours.</p>
+        </div>
+    </section>
+</section>
+
+
+<section class="wrap-industry-content">
+    <section class="main-industry-section">
+        <h1 class="main-industry-heading">We excel in our industry so that you can get in yours.</h1>
+        <p class="main-industry-para">We offer expertise across various industries. See some of the industries we
+            have vast experience working in as a full-service marketing agency.</p>
+        <section class="bottom-industry-main-section">
+            <ul>
+                <li>Automotive</li>
+                <li>Brands & FMCG</li>
+                <li>BTL Agencies</li>
+                <li>Construction & Engineering</li>
+                <hr>
+            </ul>
+
+            <ul>
+                <li>Corporate Companies</li>
+                <li>Courier & Logistics</li>
+                <li>Government Organizations</li>
+                <li>Group of Companies</li>
+                <hr>
+            </ul>
+
+            <ul>
+                <li>IT Solutions & Services</li>
+                <li>Law Firms</li>
+                <li>Mills & Factories</li>
+                <li>Multinational Companies</li>
+                <hr>
+            </ul>
+
+            <ul>
+                <li>NGO's</li>
+                <li>Pharmaceuticals & Homeopathic</li>
+                <li>Restaurants & Cafes</li>
+                <li>Institutes & Schools</li>
+                <hr>
+            </ul>
+        </section>
+    </section>
+</section>
+
+
+<section class="reasons-section">
+    <div class="reasons-container">
+        <h1 class="reasons-bg-text">4 REASONS</h1>
+        <h2 class="reasons-heading">Why you should choose our services</h2>
+        <p class="reasons-subheading">
+            We take pride in helping our clients deliver marvelous results when it comes to their projects.
+            From data to performance, we’ve got you covered.
+        </p>
+
+        <div class="reasons-grid">
+            <!-- Card 1 -->
+            <div class="reason-card">
+                <img src="{{ url_for('static', filename='images/hand.png') }}" alt="Business Icon" />
+                <h3>We know your business already</h3>
+                <p>
+                    The sad thing is the majority of people have no clue about what it’s they truly want.
+                    They have no clarity.
+                </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="reason-card">
+                <img src="{{ url_for('static', filename='images/calender.png') }}" alt="Code Icon" />
+                <h3>Building context not just code</h3>
+                <p>
+                    What steps are required to get you to the goal? Make the plan as detailed as possible.
+                </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="reason-card">
+                <img src="{{ url_for('static', filename='images/stock.png') }}" alt="Responsive Icon" />
+                <h3>We are responsive & flexible</h3>
+                <p>
+                    This is perhaps the single biggest obstacle that all of us must overcome in order to be successful.
+                </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="reason-card">
+                <img src="{{ url_for('static', filename='images/setting.png') }}" alt="Experience Icon" />
+                <h3>11 years experience & counting</h3>
+                <p>
+                    Years of experience helped us to create a process that guarantees productivity & profitability for
+                    your solution.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="wework-wrap-content">
+    <section class="wework-section">
+        <div class="wework-container">
+            <h1 class="wework-bg-text">WEWORK</h1>
+            <h2 class="wework-heading">How it helps your business succeed</h2>
+
+            <div class="wework-grid">
+                <!-- Card 1 -->
+                <div class="wework-card">
+                    <img src="{{ url_for('static', filename='images/talk.png') }}" alt="Business Icon" />
+                    <h3>In-Depth Discussion</h3>
+                    <p>
+                        We meet customers in a set place to
+                        discuss the details about needs and
+                        demands before proposing a plan.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="wework-card">
+                    <img src="{{ url_for('static', filename='images/computer.png') }}" alt="Code Icon" />
+                    <h3>Concepts & Initiatives</h3>
+                    <p>
+                        Our experts come up with all kinds of
+                        ideas and initiatives for delivering the
+                        best solutions for the IT services
+                        chosen.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="wework-card">
+                    <img src="{{ url_for('static', filename='images/test.png') }}" alt="Responsive Icon" />
+                    <h3>Testing & Trying</h3>
+                    <p>
+                        After agreeing on the ideas and plans,
+                        we will conduct as scheduled and give
+                        comments on the results &
+                        adaptations.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="wework-card">
+                    <img src="{{ url_for('static', filename='images/install.png') }}" alt="Experience Icon" />
+                    <h3>Execute & Install</h3>
+                    <p>
+                        Once the final plan is approved,
+                        everything will be conducted according
+                        to the agreed contract.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

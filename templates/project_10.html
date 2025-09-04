@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+
+{{ prj_component.project_hero('images/pj11.png', 'Digital Dry Cleaners UK') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-shirt",
+    "Digital Dry Cleaners UK",
+    "Digital Dry Cleaners UK is an online service platform built to simplify laundry and dry-cleaning requests for households and businesses. The site allows customers to schedule pickups, track orders, and receive timely deliveries. With a professional design, it communicates reliability while showcasing services such as garment care, stain removal, and corporate laundry solutions. A user-friendly interface paired with responsive design ensures convenience for busy customers. The platform emphasizes trust, efficiency, and clear service workflows, helping customers enjoy hassle-free laundry solutions without leaving their homes."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Service Packages", "items": [
+        "Household garment care.",
+        "Corporate laundry services.",
+        "Special fabric cleaning."
+    ]},
+    {"heading": "Convenience Tools", "items": [
+        "Pickup scheduling system.",
+        "Delivery tracking options.",
+        "Customer notifications."
+    ]},
+    {"heading": "Professional Branding", "items": [
+        "Modern, clean design.",
+        "Trust-focused messaging.",
+        "Clear workflow visuals."
+    ]},
+    {"heading": "Customer Engagement", "items": [
+        "Inquiry and booking forms.",
+        "Promotional offers."
+    ]},
+    {"heading": "Responsive Design", "items": [
+        "Seamless mobile ordering.",
+        "Optimized for speed.",
+        "Accessible layouts."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Simplify laundry and dry-cleaning service requests.",
+    "Provide a convenient, tech-enabled experience.",
+    "Build long-term trust through reliability and transparency."
+]) }}
+
+
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

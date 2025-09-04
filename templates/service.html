@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block body_class %}Services-page{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/service.css') }}">{% endblock styles %}
+{% block content %}
+{% from "components/service.html" import service %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+
+{% with heading="IT Services" %}
+{% include "components/intro.html" %}
+{% endwith %}
+<section class="services-section">
+    <div class="services-container">
+        <h1 class="services-bg-text">IT SERVICES</h1>
+        <h2 class="services-heading">Highly Tailored IT Design, Management & Support Services</h2>
+        <p class="services-subheading">
+            We take pride in helping our clients deliver marvelous results when it comes to their projects.
+            From data to performance, we’ve got you covered.
+        </p>
+
+        <!-- Websites & Web Applications -->
+        {% set website_cards = [
+            {"id":"ctg-1","img": "images/wordpress.png", "alt": "WordPress logo", "text": "WordPress Development"},
+            {"id":"ctg-2","img": "images/shopify.png", "alt": "Shopify logo", "text": "Shopify eCommerce Store"},
+            {"img": "images/store.png", "alt": "Store logo", "text": "Custom eCommerce Store"},
+            {"img": "images/web.png", "alt": "Web logo", "text": "Custom Web Application"},
+            {"img": "images/maintain.png", "alt": "Maintenance logo", "text": "Web Maintenance"}
+        ] %}
+        {{ service("Websites & Web Applications", website_cards) }}
+
+
+        <!-- Mobile Apps Development -->
+        {% set website_cards = [
+            {"id":"ctg-1","img": "images/playstore.png", "alt": "WordPress logo", "text": "Android Apps"},
+            {"img": "images/ios.png", "alt": "Shopify logo", "text": "iOS Apps"},
+            {"img": "images/Hybrid.png", "alt": "Store logo", "text": "Hybrid / Cross Platform"},
+            {"img": "images/Qc.png", "alt": "Web logo", "text": "QC & App Testing"}
+        ] %}
+        {{ service("Mobile Apps Development", website_cards) }}
+
+
+        <!-- Corporate Branding -->
+        {% set website_cards = [
+            {"id":"ctg-1","img": "images/Logo design.png", "alt": "WordPress logo", "text": "Logo Designing"},
+            {"id":"ctg-2","img": "images/UI.png", "alt": "Shopify logo", "text": "UI/UX Designing"},
+            {"img": "images/Brand.png", "alt": "Store logo", "text": "Brand Identity"},
+            {"img": "images/Posters.png", "alt": "Web logo", "text": "Posters & Brochures"},
+            {"img": "images/Social.png", "alt": "Web logo", "text": "Social Media Branding"}
+        ] %}
+        {{ service("Corporate Branding", website_cards) }}
+
+
+        <!-- Digital Marketing -->
+        {% set website_cards = [
+            {"id":"ctg-1","img": "images/SEO.png", "alt": "WordPress logo", "text": "Search Engine Optimization"},
+            {"id":"ctg-2","img": "images/Media.png", "alt": "Shopify logo", "text": "Social Media Marketing"},
+            {"img": "images/Brand.png", "alt": "Content logo", "text": "Content Writing"},
+            {"img": "images/Posters.png", "alt": "Interview logo", "text": "Interviews & Video Recordings"},
+            {"img": "images/Social.png", "alt": "Company logo", "text": "Cinematic Company Profile"}
+        ] %}
+        {{ service("Digital Marketing", website_cards) }}
+
+    </div>
+</section>
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

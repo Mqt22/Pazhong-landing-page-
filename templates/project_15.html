@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj16.png', 'Cafe Classic') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-mug-hot",
+    "Cafe Classic",
+    "Cafe Classic is a dedicated brand platform for premium coffee and tea vending solutions, offering fully automatic vending machines and instant premixes. The site emphasizes product quality, convenience, and consistency for offices, retail outlets, and hospitality businesses. With bright visuals and a welcoming design, it showcases premix flavors, machine specifications, and franchise opportunities. The layout highlights brand credibility and trust while supporting quick ordering and inquiries. A responsive structure ensures seamless browsing across desktop and mobile devices, making it easier for clients to explore products and services. Cafe Classic builds authority by balancing product detail with a customer-friendly experience."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Product Offerings", "items": [
+        "Coffee and tea premixes.",
+        "Fully automatic vending machines.",
+        "Franchise opportunities."
+    ]},
+    {"heading": "Quality Assurance", "items": [
+        "Consistent taste guarantee.",
+        "Premium ingredients.",
+        "Trusted by businesses."
+    ]},
+    {"heading": "Business-Focused", "items": [
+        "Solutions for offices and retail.",
+        "Hospitality-focused services.",
+        "Bulk purchase options."
+    ]},
+    {"heading": "User-Friendly Experience", "items": [
+        "Clear product sections.",
+        "Simple navigation.",
+        "Quick inquiry forms."
+    ]},
+    {"heading": "Responsive Design", "items": [
+        "Optimized for mobile devices.",
+        "Fast page loads.",
+        "Accessible layouts."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Promote Cafe Classic’s vending machines and premixes effectively.",
+    "Support franchise growth and business inquiries.",
+    "Enhance brand credibility through modern design and trust signals."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

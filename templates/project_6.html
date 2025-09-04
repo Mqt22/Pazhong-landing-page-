@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+
+{{ prj_component.project_hero('images/pj6.png', 'Lucobot') }}
+
+  {{ prj_component.project_detail(
+      "fa-solid fa-robot",
+      "Lucobot",
+      "Lucobot is a robotics and AI-driven solutions platform created to showcase innovation in automation and machine intelligence. The website highlights the potential of robotics to transform industries, presenting product showcases, research insights, and multimedia demonstrations. Designed with a futuristic aesthetic, Lucobot emphasizes clean typography, bold visuals, and accessible navigation. Visitors can learn about robotics projects, explore technical documentation, and view interactive content. The responsive design ensures compatibility across all devices, while optimized performance enhances usability. Lucobot positions itself as both an informational hub and a portfolio, offering insight into how intelligent machines can redefine possibilities."
+  ) }}
+
+  {{ prj_component.project_features([
+      {"heading": "Futuristic Design", "items": [
+          "Dark-themed interface with neon accents.",
+          "High-resolution robot imagery.",
+          "Modern typography choices."
+      ]},
+      {"heading": "Robotics Showcase", "items": [
+          "Dedicated robot profile pages.",
+          "Specifications and features listed.",
+          "Demo videos for each product."
+      ]},
+      {"heading": "AI & Research Content", "items": [
+          "Articles on AI advancements.",
+          "Case studies of applications.",
+          "Industry insights and updates."
+      ]},
+      {"heading": "Interactive Media", "items": [
+          "Video demonstrations.",
+          "Animated graphics for robotics."
+      ]},
+      {"heading": "Responsive & Optimized", "items": [
+          "Smooth mobile browsing.",
+          "Fast-loading performance.",
+          "Cross-device compatibility."
+      ]}
+  ]) }}
+
+  {{ prj_component.project_goals([
+      "Promote awareness of robotics and AI innovations.",
+      "Provide engaging resources for students and enthusiasts.",
+      "Establish Lucobot as a credible hub for robotics information."
+  ]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

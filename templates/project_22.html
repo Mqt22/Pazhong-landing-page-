@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj21.png', 'Dr. Hamid General Homeo (PVT) LTD') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-briefcase-medical",
+    "Dr.Hamid General Homeo (PVT) LTD",
+    "Dr. Hamid General Homeo’s website focuses on natural homeopathic healthcare solutions, offering detailed product lines and company background. The platform emphasizes modern packaging, trusted remedies, and decades of expertise. Content is tailored for patients, doctors, and distributors seeking reliable homeopathic solutions. Dedicated sections highlight company history, product catalogues, and certifications. Responsive and professional design supports credibility while making information accessible across devices. The platform builds a professional brand identity in the alternative medicine space."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Company Overview", "items": [
+        "History and expertise.",
+        "Mission and values.",
+        "Trusted reputation."
+    ]},
+    {"heading": "Product Catalog", "items": [
+        "Homeopathic remedies.",
+        "Natural health solutions.",
+        "Detailed product pages."
+    ]},
+    {"heading": "Certifications", "items": [
+        "Quality standards listed.",
+        "Industry recognition.",
+        "Safety assurance."
+    ]},
+    {"heading": "Distributor Support", "items": [
+        "Partner contact info.",
+        "Bulk order options."
+    ]},
+    {"heading": "Responsive Structure", "items": [
+        "Mobile-friendly layouts.",
+        "Optimized for fast browsing.",
+        "Professional visuals."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Build credibility in the homeopathic medicine sector.",
+    "Provide clear product information for patients and partners.",
+    "Support business growth through online presence."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj31.png', 'Idrees Textile Mills LTD') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-industry",
+    "Idrees Textile Mills LTD",
+    "Idrees Textile Mills LTD is a corporate website highlighting textile manufacturing, product lines, and industrial capacity. The platform emphasizes professionalism and large-scale production with detailed sections on fabrics, yarn, and processes. Clean visuals showcase modern machinery and product samples. The site builds credibility with quality certifications, sustainability practices, and decades of expertise. Responsive layouts allow easy navigation for buyers, investors, and business partners. Idrees Textile Mills positions itself as a leader in Pakistan’s textile industry, promoting innovation, compliance, and trust."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Corporate Overview", "items": [
+        "Company background.",
+        "Mission and vision.",
+        "History of excellence."
+    ]},
+    {"heading": "Product Catalog", "items": [
+        "Yarns and fabrics.",
+        "Industrial capacity.",
+        "Detailed product lines."
+    ]},
+    {"heading": "Certifications", "items": [
+        "Quality standards.",
+        "Sustainability reports.",
+        "Industry compliance."
+    ]},
+    {"heading": "Investor Focus", "items": [
+        "Partnership details.",
+        "Business opportunities."
+    ]},
+    {"heading": "Responsive Design", "items": [
+        "Cross-device browsing.",
+        "Optimized navigation.",
+        "Fast performance."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Promote Idrees Textile Mills’ manufacturing strength.",
+    "Provide transparency with certifications and processes.",
+    "Reinforce trust with partners and buyers."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

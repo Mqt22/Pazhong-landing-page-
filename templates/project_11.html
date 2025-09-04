@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj12.png', 'Salt Pakistan') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-gem",
+    "Salt Pakistan",
+    "Salt Pakistan is a product catalog site for premium Himalayan salt and mined minerals, showcasing categories like fine salt, rock chunks, lamps, and culinary slabs. The layout emphasizes clean tiles, quick browsing, and clear CTAs for wholesale and retail inquiries. Each product area includes specs, usage ideas, packaging details, and export readiness, helping buyers evaluate quality at a glance. Trust signals—origin notes, certifications, and shipping info—support international orders. Fully responsive pages and optimized media keep discovery fast on any device, making it a practical destination for distributors, retailers, and hospitality buyers seeking reliable, natural salt products."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Clear Product Tiles", "items": [
+        "Category grid for quick browse.",
+        "Large imagery for products.",
+        "Prominent inquiry buttons."
+    ]},
+    {"heading": "Spec-Driven Pages", "items": [
+        "Grades and grain sizes.",
+        "Packaging and MOQ details.",
+        "Use-cases and care tips."
+    ]},
+    {"heading": "Export-Ready Info", "items": [
+        "Certifications highlighted.",
+        "Shipping and lead times.",
+        "Bulk/retail options."
+    ]},
+    {"heading": "Lead Capture", "items": [
+        "Quote request forms.",
+        "Wholesale contact paths."
+    ]},
+    {"heading": "Responsive Performance", "items": [
+        "Mobile-first layout.",
+        "Optimized media loading.",
+        "Accessible navigation."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Help buyers evaluate and request quotations quickly.",
+    "Showcase export readiness and product quality.",
+    "Increase wholesale inquiries with clear CTAs."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

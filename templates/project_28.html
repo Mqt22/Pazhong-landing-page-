@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj20.png', 'Great Gwadar') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-flag",
+    "Great Gwadar",
+    "Great Gwadar is an informational platform showcasing investment, trade, and development opportunities in Gwadar, Pakistan. The website highlights infrastructure projects, economic zones, and international collaborations. Hero visuals emphasize Gwadar’s strategic location and potential for investors. Clear sections present details on trade zones, industrial projects, and real estate. The platform builds credibility through news updates and policy details. With a modern and responsive design, Great Gwadar promotes the city as a hub of growth and opportunity."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "City Highlights", "items": [
+        "Strategic location.",
+        "Economic hub.",
+        "Global trade focus."
+    ]},
+    {"heading": "Investment Info", "items": [
+        "Economic zones.",
+        "Real estate updates.",
+        "Trade policy highlights."
+    ]},
+    {"heading": "News Updates", "items": [
+        "Development stories.",
+        "Project milestones.",
+        "Event coverage."
+    ]},
+    {"heading": "Investor Tools", "items": [
+        "Guides and forms.",
+        "Contact support."
+    ]},
+    {"heading": "Responsive Layout", "items": [
+        "Accessible on mobile.",
+        "Optimized browsing.",
+        "Professional design."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Promote Gwadar as an international investment hub.",
+    "Provide resources for global investors.",
+    "Highlight infrastructure and trade projects."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}

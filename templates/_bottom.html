@@ -1,0 +1,60 @@
+<section class="main-bottom-section">
+            <section class="map-main-section">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d878267.9010104599!2d73.12601082938906!3d30.697759755406384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919054ccfb7fa63%3A0xc8a1ffb24d974730!2sPaZhong%20Automation!5e0!3m2!1sen!2s!4v1756302933045!5m2!1sen!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+            <div class="contact-container">
+                <div class="contact-left">
+                    <h2>Grow your business with our expertise</h2>
+                    <p>Grow your business with our expertise. We are dedicated to serving you all time.</p>
+
+                    <div class="contact-info">
+                        <p>
+                            <img src="{{ url_for('static', filename='images/Location.png') }}" alt="Location"
+                                class="icon">
+                            Shop, 7C, Block C Pak-Arab Housing Scheme, Lahore
+                        </p>
+                        <p id="number">
+                            <img src="{{ url_for('static', filename='images/phone.png') }}" alt="Phone" class="icon">
+                            03045929006 03108657920
+                        </p>
+                        <p id="p-of-contact-info">
+                            <img src="{{ url_for('static', filename='images/email.png') }}" alt="Email" class="icon">
+                            info@pazhongautomation.com
+                        </p>
+                        <p>
+                            <img src="{{ url_for('static', filename='images/whatsapp.png') }}" alt="WhatsApp"
+                                class="icon">
+                            923452159821
+                        </p>
+                        <p>
+                            <img src="{{ url_for('static', filename='images/map.png') }}" alt="Map" class="icon">
+                            Office Location
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="contact-right">
+                    <h2>Tell us about your idea, and we’ll make it happen</h2>
+                    <p>Have a brand problem that needs to be solved? We’d love to hear about it!</p>
+
+                    <form action="/submit" method="POST" class="contact-form">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Full Name" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="form-row">
+                            <input type="text" name="contact" placeholder="Contact no*" required>
+                            <input type="text" name="inquiry" placeholder="Inquiry for">
+                        </div>
+
+                        <textarea name="details" placeholder="Details*" required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>

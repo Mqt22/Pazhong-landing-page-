@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block body_class %}Project_2{% endblock body_class %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock styles %}
+{% block content %}
+{% import "components/prj_component.html" as prj_component %}
+    {# This is the navbar of pazhong automation#}
+        <div class="top-bar">
+        <address>
+            <a href="mailto:info@yourcompany.com">info@pazhongautomation.com</a> |
+            <a href="tel:+923452159821">(+92) 3045929006 - (+92)3108657920</a>
+        </address>
+        <span class="working-hours">Mon - Sun | 24/7</span>
+        <nav class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </div>
+{{ prj_component.project_hero('images/pj28.png', 'Sadabahar Wedding') }}
+
+{{ prj_component.project_detail(
+    "fa-solid fa-church",
+    "Sadabahar Wedding",
+    "Sadabahar Wedding is an event management website specializing in weddings and luxury gatherings. The platform highlights stunning venue decorations, services, and event planning options. Hero visuals showcase elaborate stage setups and floral arrangements. Visitors can explore packages, booking details, and photo galleries. With professional branding and smooth navigation, Sadabahar Wedding builds trust for clients seeking premium wedding solutions. The site combines elegance with functionality, making it a one-stop solution for memorable events."
+) }}
+
+{{ prj_component.project_features([
+    {"heading": "Venue Showcases", "items": [
+        "Stage decorations.",
+        "Floral themes.",
+        "Lighting setups."
+    ]},
+    {"heading": "Service Sections", "items": [
+        "Catering options.",
+        "Event planning.",
+        "Package details."
+    ]},
+    {"heading": "Photo Galleries", "items": [
+        "Past events.",
+        "Decor inspiration.",
+        "Luxury themes."
+    ]},
+    {"heading": "Client Engagement", "items": [
+        "Booking forms.",
+        "Inquiry support."
+    ]},
+    {"heading": "Responsive Design", "items": [
+        "Mobile optimized.",
+        "Smooth navigation.",
+        "Fast loading."
+    ]}
+]) }}
+
+{{ prj_component.project_goals([
+    "Promote Sadabahar Wedding’s event services.",
+    "Showcase premium venue decorations.",
+    "Build trust with clients planning weddings."
+]) }}
+
+{% include "components/phone.html" %}
+{% include "_bottom.html" %}
+{% endblock content %}
